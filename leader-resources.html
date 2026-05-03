@@ -9,22 +9,28 @@
 <meta property="og:title" content="Pack 828 — Cub Scout Leader Resources">
 <meta property="og:description" content="Curated free resources for Cub Scout leaders: adventure plans, ceremonies, and traditions across all ranks.">
 <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-  html, body { margin: 0; padding: 0; background: #f7f8fb; }
+  html, body { margin: 0; padding: 0; background: #0033a0; }
   body { min-height: 100vh; }
   .p828-resources {
-    --p828-navy: #003f87;
-    --p828-navy-dark: #002a5c;
-    --p828-gold: #fdc116;
-    --p828-gold-soft: #fff4d1;
+    --p828-navy: #0033a0;
+    --p828-navy-dark: #00226b;
+    --p828-gold: #f2a900;
+    --p828-gold-deep: #c98a00;
+    --p828-gold-soft: #fdf1cc;
     --p828-ink: #1c1c1c;
     --p828-muted: #5a5a5a;
-    --p828-line: #e3e6ec;
-    --p828-bg: #f7f8fb;
-    --p828-warn-bg: #fff4e5;
-    --p828-warn-bd: #f0a04b;
-    --p828-tag-bg: #eef2fa;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --p828-line: #dde2ea;
+    --p828-bg: #f6f8fc;
+    --p828-warn-bg: #fff4e0;
+    --p828-warn-bd: #d68b00;
+    --p828-tag-bg: #eaf0fa;
+    --p828-heading-font: 'Lora', Georgia, 'Times New Roman', serif;
+    --p828-body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: var(--p828-body-font);
     color: var(--p828-ink);
     line-height: 1.55;
     max-width: 1280px;
@@ -32,29 +38,40 @@
     padding: 16px 20px 48px;
     box-sizing: border-box;
   }
+  .p828-resources h1, .p828-resources h2, .p828-resources h3 {
+    font-family: var(--p828-heading-font);
+    font-weight: 700;
+    letter-spacing: 0.005em;
+  }
   .p828-resources *, .p828-resources *::before, .p828-resources *::after { box-sizing: border-box; }
 
   .p828-hero {
-    background: linear-gradient(135deg, var(--p828-navy) 0%, var(--p828-navy-dark) 100%);
     color: #fff;
-    border-radius: 14px;
-    padding: 32px 28px;
-    border-left: 8px solid var(--p828-gold);
+    padding: 24px 8px 28px;
+    border-bottom: 3px solid var(--p828-gold);
+    margin-bottom: 8px;
   }
-  .p828-hero h1 { margin: 0 0 6px; font-size: 1.85rem; letter-spacing: -0.01em; }
-  .p828-hero p  { margin: 0; opacity: 0.92; max-width: 70ch; }
-  .p828-hero .p828-meta { margin-top: 12px; font-size: 0.85rem; opacity: 0.78; }
+  .p828-hero h1 {
+    margin: 0 0 10px;
+    font-size: 2.25rem;
+    color: var(--p828-gold);
+    letter-spacing: 0.005em;
+    line-height: 1.2;
+  }
+  .p828-hero p  { margin: 0; color: #fff; opacity: 0.95; max-width: 70ch; font-size: 1.05rem; }
+  .p828-hero .p828-meta { margin-top: 14px; font-size: 0.85rem; color: var(--p828-gold-soft); opacity: 0.9; }
 
   .p828-callout {
     background: var(--p828-warn-bg);
     border: 1px solid var(--p828-warn-bd);
-    border-left: 5px solid var(--p828-warn-bd);
+    border-left: 5px solid var(--p828-gold);
     border-radius: 10px;
-    padding: 14px 16px;
-    margin: 20px 0;
+    padding: 14px 18px;
+    margin: 22px 0;
     font-size: 0.93rem;
+    color: #5a3e00;
   }
-  .p828-callout strong { color: #8a4a00; }
+  .p828-callout strong { color: var(--p828-gold-deep); }
 
   .p828-toolbar {
     display: flex;
@@ -63,13 +80,13 @@
     align-items: center;
     margin: 20px 0 14px;
     padding: 14px;
-    background: var(--p828-bg);
-    border: 1px solid var(--p828-line);
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 12px;
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
   }
   .p828-toolbar input[type="search"] {
     flex: 1 1 220px;
@@ -82,7 +99,12 @@
   }
   .p828-toolbar input[type="search"]:focus {
     outline: 2px solid var(--p828-gold);
+    outline-offset: 1px;
     border-color: var(--p828-navy);
+  }
+  .p828-toolbar select:focus {
+    outline: 2px solid var(--p828-gold);
+    outline-offset: 1px;
   }
   .p828-toolbar select {
     padding: 10px 12px;
@@ -109,27 +131,29 @@
   .p828-toolbar .p828-clear:hover { background: #fff; color: var(--p828-ink); }
 
   .p828-section {
-    margin-top: 32px;
+    margin-top: 36px;
   }
   .p828-section h2 {
-    font-size: 1.25rem;
-    margin: 0 0 4px;
-    color: var(--p828-navy-dark);
+    font-size: 1.45rem;
+    margin: 0 0 6px;
+    color: var(--p828-gold);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    border-bottom: 2px solid var(--p828-gold);
+    padding-bottom: 8px;
   }
   .p828-section h2::before {
     content: "";
     display: inline-block;
-    width: 6px; height: 22px;
+    width: 6px; height: 26px;
     background: var(--p828-gold);
     border-radius: 3px;
   }
   .p828-section .p828-sub {
-    margin: 0 0 14px 16px;
-    color: var(--p828-muted);
-    font-size: 0.92rem;
+    margin: 0 0 14px 18px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.94rem;
   }
 
   .p828-grid {
@@ -148,19 +172,26 @@
     transition: box-shadow .15s, transform .15s;
   }
   .p828-card:hover {
-    box-shadow: 0 4px 14px rgba(0, 63, 135, 0.08);
+    box-shadow: 0 4px 14px rgba(0, 51, 160, 0.12);
+    border-color: var(--p828-gold);
     transform: translateY(-1px);
   }
   .p828-card h3 {
-    font-size: 1.02rem;
+    font-size: 1.08rem;
     margin: 0;
     line-height: 1.3;
+    font-weight: 600;
   }
   .p828-card h3 a {
     color: var(--p828-navy);
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s, color .15s;
   }
-  .p828-card h3 a:hover { text-decoration: underline; }
+  .p828-card h3 a:hover {
+    color: var(--p828-navy-dark);
+    border-bottom-color: var(--p828-gold);
+  }
   .p828-card .p828-desc {
     margin: 0;
     font-size: 0.92rem;
@@ -181,33 +212,35 @@
     font-size: 0.72rem;
     background: var(--p828-tag-bg);
     color: var(--p828-navy-dark);
-    padding: 3px 8px;
+    padding: 3px 9px;
     border-radius: 999px;
     font-weight: 500;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
+    font-family: var(--p828-body-font);
   }
-  .p828-tag.p828-mixed { background: var(--p828-gold-soft); color: #6b4d00; }
-  .p828-tag.p828-source-official { background: #d9e8ff; color: #002a5c; }
+  .p828-tag.p828-mixed { background: var(--p828-gold-soft); color: var(--p828-gold-deep); }
+  .p828-tag.p828-source-official { background: #dde6f5; color: var(--p828-navy-dark); }
   .p828-tag.p828-source-blog { background: #e6f4ea; color: #1e6b34; }
-  .p828-tag.p828-source-archive { background: #f0e6f6; color: #5d2f7a; }
-  .p828-tag.p828-source-forum { background: #fde8e8; color: #8a2424; }
-  .p828-tag.p828-source-tool { background: #e8f2f5; color: #1e5969; }
+  .p828-tag.p828-source-archive { background: #ede4f3; color: #5d2f7a; }
+  .p828-tag.p828-source-forum { background: #fbe4e4; color: #8a2424; }
+  .p828-tag.p828-source-tool { background: #e1eef2; color: #1e5969; }
 
   .p828-flag {
     font-size: 0.83rem;
     background: var(--p828-warn-bg);
-    border-left: 3px solid var(--p828-warn-bd);
-    padding: 6px 10px;
+    border-left: 3px solid var(--p828-gold);
+    padding: 7px 11px;
     border-radius: 5px;
-    color: #6b3d00;
+    color: #5a3e00;
     margin-top: 4px;
   }
 
   .p828-empty {
     text-align: center;
     padding: 40px 20px;
-    color: var(--p828-muted);
-    background: var(--p828-bg);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px dashed rgba(255, 255, 255, 0.25);
     border-radius: 12px;
     grid-column: 1 / -1;
   }
@@ -215,11 +248,12 @@
   .p828-footer {
     margin-top: 48px;
     padding-top: 20px;
-    border-top: 1px solid var(--p828-line);
-    font-size: 0.82rem;
-    color: var(--p828-muted);
+    border-top: 2px solid var(--p828-gold);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.88);
   }
-  .p828-footer p { margin: 4px 0; }
+  .p828-footer p { margin: 6px 0; }
+  .p828-footer strong { color: var(--p828-gold); }
 
   @media (max-width: 600px) {
     .p828-hero { padding: 22px 18px; }
