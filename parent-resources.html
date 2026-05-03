@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pack 828 &mdash; Parent &amp; Family Resources</title>
+<meta name="description" content="A welcoming guide for Cub Scout parents and families in Pack 828: getting started, uniforms, helping at home, camping prep, volunteering, and bridging to Scouts BSA.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Pack 828 — Parent & Family Resources">
+<meta property="og:description" content="Curated free resources for Cub Scout families: new family welcome, uniforms, advancement, outdoors, and volunteering.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0033a0; }
+  body { min-height: 100vh; }
+  .p828-resources {
+    --p828-navy: #0033a0;
+    --p828-navy-dark: #00226b;
+    --p828-gold: #f2a900;
+    --p828-gold-deep: #c98a00;
+    --p828-gold-soft: #fdf1cc;
+    --p828-ink: #1c1c1c;
+    --p828-muted: #5a5a5a;
+    --p828-line: #dde2ea;
+    --p828-bg: #f6f8fc;
+    --p828-warn-bg: #fff4e0;
+    --p828-warn-bd: #d68b00;
+    --p828-tag-bg: #eaf0fa;
+    --p828-heading-font: 'Lora', Georgia, 'Times New Roman', serif;
+    --p828-body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: var(--p828-body-font);
+    color: var(--p828-ink);
+    line-height: 1.55;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px 20px 48px;
+    box-sizing: border-box;
+  }
+  .p828-resources h1, .p828-resources h2, .p828-resources h3 {
+    font-family: var(--p828-heading-font);
+    font-weight: 700;
+    letter-spacing: 0.005em;
+  }
+  .p828-resources *, .p828-resources *::before, .p828-resources *::after { box-sizing: border-box; }
+
+  .p828-hero {
+    color: #fff;
+    padding: 24px 8px 28px;
+    border-bottom: 3px solid var(--p828-gold);
+    margin-bottom: 8px;
+  }
+  .p828-hero h1 {
+    margin: 0 0 10px;
+    font-size: 2.25rem;
+    color: var(--p828-gold);
+    letter-spacing: 0.005em;
+    line-height: 1.2;
+  }
+  .p828-hero p  { margin: 0; color: #fff; opacity: 0.95; max-width: 70ch; font-size: 1.05rem; }
+  .p828-hero .p828-meta { margin-top: 14px; font-size: 0.85rem; color: var(--p828-gold-soft); opacity: 0.9; }
+
+  /* Pack-specific welcome panel */
+  .p828-pack-info {
+    background: #fff;
+    color: var(--p828-ink);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 22px 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    border-top: 4px solid var(--p828-gold);
+  }
+  .p828-pack-info h2 {
+    margin: 0 0 14px;
+    font-size: 1.4rem;
+    color: var(--p828-navy);
+    border-bottom: 2px solid var(--p828-gold);
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .p828-pack-info h2::before {
+    content: "";
+    display: inline-block;
+    width: 6px; height: 24px;
+    background: var(--p828-gold);
+    border-radius: 3px;
+  }
+  .p828-pack-info h3 {
+    color: var(--p828-navy);
+    font-size: 1rem;
+    margin: 16px 0 4px;
+  }
+  .p828-pack-info p { margin: 4px 0 8px; }
+  .p828-pack-info a { color: var(--p828-navy); text-decoration: underline; text-decoration-color: var(--p828-gold); text-underline-offset: 2px; }
+  .p828-pack-info .p828-placeholder {
+    background: var(--p828-gold-soft);
+    color: var(--p828-gold-deep);
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-style: italic;
+    font-size: 0.92em;
+    border: 1px dashed var(--p828-warn-bd);
+  }
+  .p828-pack-info .p828-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+  }
+  .p828-pack-info .p828-quick-card {
+    background: var(--p828-bg);
+    border-radius: 8px;
+    padding: 12px 14px;
+    border-left: 3px solid var(--p828-gold);
+  }
+  .p828-pack-info .p828-quick-card strong {
+    display: block;
+    color: var(--p828-navy);
+    font-size: 0.88rem;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .p828-pack-info ul { margin: 6px 0; padding-left: 22px; }
+  .p828-pack-info li { margin: 4px 0; }
+
+  .p828-callout {
+    background: var(--p828-warn-bg);
+    border: 1px solid var(--p828-warn-bd);
+    border-left: 5px solid var(--p828-gold);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 22px 0;
+    font-size: 0.93rem;
+    color: #5a3e00;
+  }
+  .p828-callout strong { color: var(--p828-gold-deep); }
+
+  .p828-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0 14px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  }
+  .p828-toolbar input[type="search"] {
+    flex: 1 1 220px;
+    min-width: 180px;
+    padding: 10px 12px;
+    border: 1px solid var(--p828-line);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #fff;
+  }
+  .p828-toolbar input[type="search"]:focus {
+    outline: 2px solid var(--p828-gold);
+    outline-offset: 1px;
+    border-color: var(--p828-navy);
+  }
+  .p828-toolbar select:focus {
+    outline: 2px solid var(--p828-gold);
+    outline-offset: 1px;
+  }
+  .p828-toolbar select {
+    padding: 10px 12px;
+    border: 1px solid var(--p828-line);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #fff;
+    cursor: pointer;
+  }
+  .p828-toolbar .p828-count {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: var(--p828-muted);
+  }
+  .p828-toolbar .p828-clear {
+    background: transparent;
+    border: 1px solid var(--p828-line);
+    color: var(--p828-muted);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+  .p828-toolbar .p828-clear:hover { background: #fff; color: var(--p828-ink); }
+
+  .p828-section {
+    margin-top: 36px;
+  }
+  .p828-section h2 {
+    font-size: 1.45rem;
+    margin: 0 0 6px;
+    color: var(--p828-gold);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid var(--p828-gold);
+    padding-bottom: 8px;
+  }
+  .p828-section h2::before {
+    content: "";
+    display: inline-block;
+    width: 6px; height: 26px;
+    background: var(--p828-gold);
+    border-radius: 3px;
+  }
+  .p828-section .p828-sub {
+    margin: 0 0 14px 18px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.94rem;
+  }
+
+  .p828-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 14px;
+  }
+  .p828-card {
+    background: #fff;
+    border: 1px solid var(--p828-line);
+    border-radius: 12px;
+    padding: 16px 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow .15s, transform .15s, border-color .15s;
+  }
+  .p828-card:hover {
+    box-shadow: 0 4px 14px rgba(0, 51, 160, 0.12);
+    border-color: var(--p828-gold);
+    transform: translateY(-1px);
+  }
+  .p828-card h3 {
+    font-size: 1.08rem;
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+  .p828-card h3 a {
+    color: var(--p828-navy);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s, color .15s;
+  }
+  .p828-card h3 a:hover {
+    color: var(--p828-navy-dark);
+    border-bottom-color: var(--p828-gold);
+  }
+  .p828-card .p828-desc {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--p828-ink);
+  }
+  .p828-card .p828-url {
+    font-size: 0.78rem;
+    color: var(--p828-muted);
+    word-break: break-all;
+  }
+  .p828-card .p828-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 4px;
+  }
+  .p828-tag {
+    font-size: 0.72rem;
+    background: var(--p828-tag-bg);
+    color: var(--p828-navy-dark);
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-family: var(--p828-body-font);
+  }
+  .p828-tag.p828-essential { background: var(--p828-gold-soft); color: var(--p828-gold-deep); }
+  .p828-tag.p828-source-official { background: #dde6f5; color: var(--p828-navy-dark); }
+  .p828-tag.p828-source-blog { background: #e6f4ea; color: #1e6b34; }
+  .p828-tag.p828-source-tool { background: #e1eef2; color: #1e5969; }
+  .p828-tag.p828-source-forum { background: #fbe4e4; color: #8a2424; }
+  .p828-tag.p828-source-printable { background: #ede4f3; color: #5d2f7a; }
+  .p828-tag.p828-source-video { background: #fce4ec; color: #831843; }
+
+  .p828-flag {
+    font-size: 0.83rem;
+    background: var(--p828-warn-bg);
+    border-left: 3px solid var(--p828-gold);
+    padding: 7px 11px;
+    border-radius: 5px;
+    color: #5a3e00;
+    margin-top: 4px;
+  }
+
+  .p828-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    grid-column: 1 / -1;
+  }
+
+  .p828-footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 2px solid var(--p828-gold);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.88);
+  }
+  .p828-footer p { margin: 6px 0; }
+  .p828-footer strong { color: var(--p828-gold); }
+
+  @media (max-width: 600px) {
+    .p828-hero h1 { font-size: 1.65rem; }
+    .p828-toolbar .p828-count { margin-left: 0; width: 100%; text-align: right; }
+  }
+</style>
+</head>
+<body>
+
+<div class="p828-resources" id="p828-resources">
+  <header class="p828-hero">
+    <h1>Welcome, Pack 828 Families</h1>
+    <p>Cub Scouting works best when families are part of the adventure. This page collects the most useful free resources for parents &mdash; from your first week with the pack through your scout's bridging to a Scouts BSA troop &mdash; plus pack-specific details just for our families.</p>
+    <div class="p828-meta">Last reviewed: May 2026 &middot; For families with Lions, Tigers, Wolves, Bears, Webelos, and Arrow of Light scouts</div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- PACK 828 SPECIFIC INFO (PLACEHOLDERS — fill these in)        -->
+  <!-- ============================================================ -->
+  <section class="p828-pack-info" aria-label="Pack 828 family information">
+    <h2>For Pack 828 Families</h2>
+    <p>Quick reference for our pack. <em>Update the placeholders below with current pack details before publishing.</em></p>
+
+    <div class="p828-quick-grid">
+      <div class="p828-quick-card">
+        <strong>Den meetings</strong>
+        <span class="p828-placeholder">[Day, time, location]</span>
+      </div>
+      <div class="p828-quick-card">
+        <strong>Pack meetings</strong>
+        <span class="p828-placeholder">[Frequency, day, time, location]</span>
+      </div>
+      <div class="p828-quick-card">
+        <strong>Annual dues</strong>
+        <span class="p828-placeholder">[$ amount and what it covers]</span>
+      </div>
+      <div class="p828-quick-card">
+        <strong>Chartered organization</strong>
+        <span class="p828-placeholder">[CO name and address]</span>
+      </div>
+      <div class="p828-quick-card">
+        <strong>Cubmaster</strong>
+        <span>Email <a href="mailto:cubmaster@pack828sc.org">cubmaster@pack828sc.org</a></span>
+      </div>
+      <div class="p828-quick-card">
+        <strong>Pack calendar</strong>
+        <span class="p828-placeholder">[Link to current pack calendar]</span>
+      </div>
+    </div>
+
+    <h3>New family checklist</h3>
+    <ul>
+      <li>Register your scout at <a href="https://beascout.scouting.org/" target="_blank" rel="noopener">beascout.scouting.org</a> or talk with the Cubmaster about joining mid-year.</li>
+      <li>Create your <a href="https://my.scouting.org/" target="_blank" rel="noopener">my.Scouting</a> account so you can be linked to your scout in Scoutbook.</li>
+      <li>Complete free <strong>Youth Protection Training (YPT)</strong> at my.Scouting &mdash; required for any registered adult, recommended for any parent involved at events.</li>
+      <li>Pick up the rank handbook (Lion, Tiger, Wolf, Bear, Webelos, or Arrow of Light) at the official <a href="https://www.scoutshop.org/" target="_blank" rel="noopener">Scout Shop</a> or borrow one from the pack.</li>
+      <li>Get the basic uniform: rank-appropriate shirt, neckerchief and slide, hat, and Pack 828 council/numerals.</li>
+      <li>Save these emergency contacts: Cubmaster (above), and your scout's den leader.</li>
+      <li>Add yourself to the pack communication channel <span class="p828-placeholder">[Band, GroupMe, email list, etc.]</span>.</li>
+    </ul>
+
+    <h3>What we expect from families</h3>
+    <p><span class="p828-placeholder">[Edit this paragraph with your pack's expectations &mdash; e.g. attending pack meetings, helping with Pinewood Derby setup, contributing to Blue &amp; Gold, supporting popcorn fundraising, etc.]</span></p>
+
+    <h3>How to get help</h3>
+    <p>Questions? Email <a href="mailto:cubmaster@pack828sc.org">cubmaster@pack828sc.org</a> or talk to your den leader at the next meeting. We're a small pack &mdash; nothing is a silly question.</p>
+  </section>
+
+  <div class="p828-callout">
+    <strong>Two quick notes about the program.</strong>
+    <span>(1) The Cub Scout program was refreshed in <strong>June 2024</strong>, with renamed and restructured adventures. If you find an article that mentions an old adventure name, double-check it against the current rank handbook.
+    (2) Boy Scouts of America rebranded to <strong>Scouting America</strong> in February 2025. You'll see both names around &mdash; same organization, just a new name.</span>
+  </div>
+
+  <div class="p828-toolbar">
+    <input type="search" id="p828-search" placeholder="Search resources (e.g. 'uniform', 'YPT', 'pinewood')" aria-label="Search resources" />
+    <select id="p828-filter-cluster" aria-label="Filter by topic">
+      <option value="">All topics</option>
+      <option value="start">Getting Started &amp; Uniform</option>
+      <option value="advancement">Helping at Home &amp; Advancement</option>
+      <option value="outdoors">Outdoors, Camping &amp; Events</option>
+      <option value="volunteer">Volunteering, Safety &amp; Bridging</option>
+    </select>
+    <select id="p828-filter-source" aria-label="Filter by source type">
+      <option value="">All source types</option>
+      <option value="official">Official (Scouting America)</option>
+      <option value="tool">Tool / App</option>
+      <option value="blog">Blog</option>
+      <option value="printable">Printable</option>
+      <option value="forum">Forum / Community</option>
+      <option value="video">Video</option>
+    </select>
+    <select id="p828-filter-essential" aria-label="Filter for essentials">
+      <option value="">All resources</option>
+      <option value="yes">Just the essentials</option>
+    </select>
+    <button class="p828-clear" id="p828-clear">Clear filters</button>
+    <span class="p828-count" id="p828-count"></span>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 1. GETTING STARTED & UNIFORM                                 -->
+  <!-- ============================================================ -->
+  <section class="p828-section" data-cluster="start">
+    <h2>Getting Started &amp; Uniform Basics</h2>
+    <p class="p828-sub">If you're new, start here. What Cub Scouting is, how to register, and where everything goes on the uniform shirt.</p>
+    <div class="p828-grid">
+
+      <article class="p828-card" data-source="official" data-essential="yes">
+        <h3><a href="https://www.scouting.org/programs/cub-scouts/" target="_blank" rel="noopener">What is Cub Scouting? (Official Overview)</a></h3>
+        <p class="p828-desc">The official Scouting America landing page introducing the Cub Scout program, age ranges, and what families can expect.</p>
+        <p class="p828-url">scouting.org/programs/cub-scouts/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">Start here</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official" data-essential="yes">
+        <h3><a href="https://cubscouts.org/" target="_blank" rel="noopener">Cub Scout Ranks &amp; Adventures</a></h3>
+        <p class="p828-desc">Family-friendly portal with rank-by-rank breakdowns (Lion through Arrow of Light) and adventure summaries reflecting the June 2024 program refresh.</p>
+        <p class="p828-url">cubscouts.org</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">Start here</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="tool" data-essential="yes">
+        <h3><a href="https://beascout.scouting.org/" target="_blank" rel="noopener">BeAScout (Pack Locator &amp; Registration)</a></h3>
+        <p class="p828-desc">Official pack locator and online registration tool &mdash; enter ZIP code to find local packs and complete registration.</p>
+        <p class="p828-url">beascout.scouting.org</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-tool">Tool</span>
+          <span class="p828-tag p828-essential">For new families</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official" data-essential="yes">
+        <h3><a href="https://www.scouting.org/resources/insignia-guide/cub-scouts/" target="_blank" rel="noopener">Cub Scout Insignia &amp; Badge Placement</a></h3>
+        <p class="p828-desc">Official diagrams showing exactly where each patch, badge, and insignia is placed on the Cub Scout uniform shirt.</p>
+        <p class="p828-url">scouting.org/resources/insignia-guide/cub-scouts/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">Uniform</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://www.scoutshop.org/cub-scout-uniforms.html" target="_blank" rel="noopener">Cub Scout Uniform Guide (Scout Shop)</a></h3>
+        <p class="p828-desc">Visual uniform guide showing which shirt, neckerchief, slide, and hat go with each rank.</p>
+        <p class="p828-url">scoutshop.org/cub-scout-uniforms.html</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Uniform</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="printable">
+        <h3><a href="http://www.usscouts.org/uniforms/uniforminspections.asp" target="_blank" rel="noopener">Uniform Inspection Sheets (Printable)</a></h3>
+        <p class="p828-desc">Printable PDF inspection sheets for each rank showing correct uniform setup &mdash; useful as a parent checklist before pack meetings.</p>
+        <p class="p828-url">usscouts.org/uniforms/uniforminspections.asp</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-printable">Printable</span>
+          <span class="p828-tag">Uniform</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://www.scouting.org/about/scoutreach/" target="_blank" rel="noopener">Financial Assistance &amp; Scoutreach</a></h3>
+        <p class="p828-desc">Overview of Scouting America's outreach and financial-assistance program for families needing help with fees and gear.</p>
+        <p class="p828-url">scouting.org/about/scoutreach/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Cost help</span>
+        </div>
+        <p class="p828-flag">Specific scholarships are administered by your local council. Ask the Cubmaster about Indian Waters Council options.</p>
+      </article>
+
+      <article class="p828-card" data-source="blog">
+        <h3><a href="https://cubscoutideas.com/category/new-to-cub-scouts/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; New Parent Guide</a></h3>
+        <p class="p828-desc">Parent-focused blog with articles on registration, the first months, uniform basics, and what to expect.</p>
+        <p class="p828-url">cubscoutideas.com/category/new-to-cub-scouts/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-blog">Blog</span>
+          <span class="p828-tag p828-essential">For new families</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 2. HELPING AT HOME & ADVANCEMENT                             -->
+  <!-- ============================================================ -->
+  <section class="p828-section" data-cluster="advancement">
+    <h2>Helping at Home &amp; Advancement</h2>
+    <p class="p828-sub">How to support your scout's adventures between meetings, use Scoutbook, and understand what Cub Scouts is teaching.</p>
+    <div class="p828-grid">
+
+      <article class="p828-card" data-source="tool" data-essential="yes">
+        <h3><a href="https://scoutbook.scouting.org/" target="_blank" rel="noopener">Scoutbook (Parent Login)</a></h3>
+        <p class="p828-desc">The official advancement-tracking platform where parents view requirements, mark progress, and communicate with leaders.</p>
+        <p class="p828-url">scoutbook.scouting.org</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-tool">Tool</span>
+          <span class="p828-tag p828-essential">Essential</span>
+        </div>
+        <p class="p828-flag">Requires my.Scouting account. Ask the Cubmaster to link you to your scout if you're not seeing them in Scoutbook.</p>
+      </article>
+
+      <article class="p828-card" data-source="official" data-essential="yes">
+        <h3><a href="https://help.scoutbook.scouting.org/knowledge-base/scoutbook-user-guide-for-parents/" target="_blank" rel="noopener">Scoutbook Parent User Guide</a></h3>
+        <p class="p828-desc">Step-by-step knowledge base for parents using Scoutbook, including signing off requirements and reading reports.</p>
+        <p class="p828-url">help.scoutbook.scouting.org</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">Essential</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://www.scouting.org/programs/cub-scouts/den-leader-resources/" target="_blank" rel="noopener">Adventure Resources (Open to Parents)</a></h3>
+        <p class="p828-desc">Official adventure-by-adventure resource pages. Parents can use these to plan at-home work and see what each requirement involves.</p>
+        <p class="p828-url">scouting.org/programs/cub-scouts/den-leader-resources/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Advancement</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://www.scouting.org/about/faq/question10/" target="_blank" rel="noopener">Scout Oath &amp; Scout Law (Official Text)</a></h3>
+        <p class="p828-desc">Official text of the Scout Oath and Scout Law, used by Cub Scouts since 2015. Print these for your fridge.</p>
+        <p class="p828-url">scouting.org/about/faq/question10/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">Memorize</span>
+        </div>
+        <p class="p828-flag">The older "Cub Scout Promise" and "Law of the Pack" were retired. The Cub Scout motto is "Do Your Best."</p>
+      </article>
+
+      <article class="p828-card" data-source="blog">
+        <h3><a href="https://cubscoutideas.com/4965/who-is-akela/" target="_blank" rel="noopener">Who is Akela? (Plain-Language Explainer)</a></h3>
+        <p class="p828-desc">Plain-language explanation of "Akela" as a teacher and guide role &mdash; including how parents fulfill that role at home.</p>
+        <p class="p828-url">cubscoutideas.com/4965/who-is-akela/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-blog">Blog</span>
+          <span class="p828-tag">Concept</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official" data-essential="yes">
+        <h3><a href="https://scoutlife.org/" target="_blank" rel="noopener">Scout Life Magazine (Online)</a></h3>
+        <p class="p828-desc">The official Scouting America magazine for kids. Free articles, games, jokes, comics, and craft ideas you can use for at-home adventures.</p>
+        <p class="p828-url">scoutlife.org</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">For your scout</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="blog">
+        <h3><a href="https://blog.scoutingmagazine.org/" target="_blank" rel="noopener">Bryan on Scouting (Official Blog)</a></h3>
+        <p class="p828-desc">Official Scouting America blog covering program news, advancement updates, and parent-relevant tips. Search "parents" or "Cub Scout" to filter.</p>
+        <p class="p828-url">blog.scoutingmagazine.org</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Tips</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="video">
+        <h3><a href="https://www.youtube.com/@scoutingamerica" target="_blank" rel="noopener">Scouting America (YouTube)</a></h3>
+        <p class="p828-desc">Official video channel with how-to videos, program overviews, and family-facing explainers.</p>
+        <p class="p828-url">youtube.com/@scoutingamerica</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-video">Video</span>
+          <span class="p828-tag">All topics</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="forum">
+        <h3><a href="https://www.reddit.com/r/cubscouts/" target="_blank" rel="noopener">r/cubscouts (Reddit Community)</a></h3>
+        <p class="p828-desc">Active community Q&amp;A forum where parents share advice on advancement, uniforms, events, and common new-family questions.</p>
+        <p class="p828-url">reddit.com/r/cubscouts</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-forum">Forum</span>
+          <span class="p828-tag">Community</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 3. OUTDOORS, CAMPING & BIG EVENTS                            -->
+  <!-- ============================================================ -->
+  <section class="p828-section" data-cluster="outdoors">
+    <h2>Outdoors, Camping &amp; Big Events</h2>
+    <p class="p828-sub">Family camping, day camp, Pinewood Derby, and Blue &amp; Gold &mdash; what to expect and what to bring.</p>
+    <div class="p828-grid">
+
+      <article class="p828-card" data-source="printable" data-essential="yes">
+        <h3><a href="https://www.scouting.org/health-and-safety/ahmr/" target="_blank" rel="noopener">Annual Health &amp; Medical Record (Forms A/B/C)</a></h3>
+        <p class="p828-desc">Official download page for the Annual Health &amp; Medical Record forms required for camping and outdoor activities.</p>
+        <p class="p828-url">scouting.org/health-and-safety/ahmr/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-printable">Printable</span>
+          <span class="p828-tag p828-essential">Required for camping</span>
+        </div>
+        <p class="p828-flag">Form A/B for most Cub events; Form C requires a physician exam for longer or more strenuous outings.</p>
+      </article>
+
+      <article class="p828-card" data-source="official" data-essential="yes">
+        <h3><a href="https://www.scouting.org/outdoor-adventures/cub-scout-camping/" target="_blank" rel="noopener">Cub Scout Family Camping (Official)</a></h3>
+        <p class="p828-desc">Overview of Cub Scout camping options &mdash; pack overnighters, day camp, resident camp &mdash; with safety guidelines and parent expectations.</p>
+        <p class="p828-url">scouting.org/outdoor-adventures/cub-scout-camping/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">Camping basics</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official" data-essential="yes">
+        <h3><a href="https://www.scouting.org/programs/cub-scouts/pinewood-derby/" target="_blank" rel="noopener">Pinewood Derby (Official Hub)</a></h3>
+        <p class="p828-desc">Official central page on the Pinewood Derby with rules overview, kit info, and links to building and race resources.</p>
+        <p class="p828-url">scouting.org/programs/cub-scouts/pinewood-derby/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">PWD</span>
+        </div>
+        <p class="p828-flag">Each pack sets its own local rules. Check with the pack before final build decisions.</p>
+      </article>
+
+      <article class="p828-card" data-source="blog">
+        <h3><a href="https://cubscoutideas.com/category/pinewood-derby/" target="_blank" rel="noopener">Pinewood Derby Tips for Parents</a></h3>
+        <p class="p828-desc">Practical parent-focused articles on building, painting, weighting, and race-day strategy for Pinewood Derby cars.</p>
+        <p class="p828-url">cubscoutideas.com/category/pinewood-derby/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-blog">Blog</span>
+          <span class="p828-tag">PWD</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="blog">
+        <h3><a href="https://cubscoutideas.com/category/blue-gold/" target="_blank" rel="noopener">Blue &amp; Gold Banquet Guide</a></h3>
+        <p class="p828-desc">Parent-friendly explainer of the Blue &amp; Gold banquet &mdash; the February tradition celebrating Scouting's birthday, what to bring, what to expect.</p>
+        <p class="p828-url">cubscoutideas.com/category/blue-gold/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-blog">Blog</span>
+          <span class="p828-tag">Events</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://lnt.org/why/7-principles/" target="_blank" rel="noopener">Leave No Trace &mdash; 7 Principles for Families</a></h3>
+        <p class="p828-desc">The 7 LNT principles in family-friendly language. Used directly in several Cub Scout adventures.</p>
+        <p class="p828-url">lnt.org/why/7-principles/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official partner</span>
+          <span class="p828-tag">Outdoors</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://scoutlife.org/outdoors/" target="_blank" rel="noopener">Scout Life &mdash; Outdoor Activities &amp; Crafts</a></h3>
+        <p class="p828-desc">Family-friendly articles on hiking, camping skills, knots, and outdoor games suitable for Cub-age kids.</p>
+        <p class="p828-url">scoutlife.org/outdoors/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Outdoors</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://www.scouting.org/outdoor-adventures/" target="_blank" rel="noopener">Scouting America Outdoor Programs</a></h3>
+        <p class="p828-desc">Hub for outdoor programs and skills, including safety guidance for hiking with young Cubs.</p>
+        <p class="p828-url">scouting.org/outdoor-adventures/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Outdoors</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 4. VOLUNTEERING, SAFETY & BRIDGING                           -->
+  <!-- ============================================================ -->
+  <section class="p828-section" data-cluster="volunteer">
+    <h2>Volunteering, Safety &amp; Bridging</h2>
+    <p class="p828-sub">YPT, what volunteer roles fit your schedule, and what happens after Arrow of Light.</p>
+    <div class="p828-grid">
+
+      <article class="p828-card" data-source="tool" data-essential="yes">
+        <h3><a href="https://my.scouting.org/" target="_blank" rel="noopener">my.Scouting (Take YPT here)</a></h3>
+        <p class="p828-desc">Free, online training portal. Youth Protection Training is required for every registered adult and renews every 2 years.</p>
+        <p class="p828-url">my.scouting.org</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-tool">Tool</span>
+          <span class="p828-tag p828-essential">Required for adults</span>
+        </div>
+        <p class="p828-flag">Create a free account, complete YPT (~30 min), and download your certificate. Provide it to the Cubmaster.</p>
+      </article>
+
+      <article class="p828-card" data-source="official" data-essential="yes">
+        <h3><a href="https://www.scouting.org/training/youth-protection/" target="_blank" rel="noopener">Youth Protection Overview</a></h3>
+        <p class="p828-desc">Public overview of Scouting America's youth-protection policies, including two-deep leadership and barriers to abuse, with FAQ for parents.</p>
+        <p class="p828-url">scouting.org/training/youth-protection/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag p828-essential">Safety</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://www.scouting.org/health-and-safety/gss/" target="_blank" rel="noopener">Guide to Safe Scouting</a></h3>
+        <p class="p828-desc">The official safety policy document covering two-deep leadership, age-appropriate activities, transportation, and event safety rules.</p>
+        <p class="p828-url">scouting.org/health-and-safety/gss/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Safety</span>
+        </div>
+        <p class="p828-flag">Updated periodically &mdash; always use the live online version, not a saved PDF.</p>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://www.scouting.org/programs/cub-scouts/leaders/" target="_blank" rel="noopener">Volunteer Roles in a Pack</a></h3>
+        <p class="p828-desc">Overview of registered adult roles parents can fill: den leader, committee member, treasurer, popcorn kernel, and more.</p>
+        <p class="p828-url">scouting.org/programs/cub-scouts/leaders/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Volunteering</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="official">
+        <h3><a href="https://www.scouting.org/programs/scouts-bsa/" target="_blank" rel="noopener">Scouts BSA Program (What's After AOL)</a></h3>
+        <p class="p828-desc">Official overview of the Scouts BSA program (ages 11-17) &mdash; the next step after Arrow of Light bridging.</p>
+        <p class="p828-url">scouting.org/programs/scouts-bsa/</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Bridging</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="blog">
+        <h3><a href="https://blog.scoutingmagazine.org/?s=arrow+of+light+bridge" target="_blank" rel="noopener">Arrow of Light &amp; Bridging Articles</a></h3>
+        <p class="p828-desc">Search-curated archive of official posts on Arrow of Light, the bridging ceremony, and joining a Scouts BSA troop.</p>
+        <p class="p828-url">blog.scoutingmagazine.org</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-official">Official</span>
+          <span class="p828-tag">Bridging</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="blog">
+        <h3><a href="https://cubscoutideas.com/?s=choosing+a+troop" target="_blank" rel="noopener">Choosing a Scouts BSA Troop</a></h3>
+        <p class="p828-desc">Parent-focused articles on visiting troops, what questions to ask, and evaluating a troop's fit before crossing over.</p>
+        <p class="p828-url">cubscoutideas.com</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-blog">Blog</span>
+          <span class="p828-tag">Bridging</span>
+        </div>
+      </article>
+
+      <article class="p828-card" data-source="forum">
+        <h3><a href="https://www.reddit.com/r/BSA/" target="_blank" rel="noopener">r/BSA (Reddit)</a></h3>
+        <p class="p828-desc">Broader Scouting community forum useful for cross-program questions, troop-shopping advice, and bridging discussions.</p>
+        <p class="p828-url">reddit.com/r/BSA</p>
+        <div class="p828-tags">
+          <span class="p828-tag p828-source-forum">Forum</span>
+          <span class="p828-tag">Community</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="p828-footer">
+    <p><strong>Welcome to Pack 828!</strong> If you have a question and aren't sure where to look, email <a href="mailto:cubmaster@pack828sc.org" style="color: var(--p828-gold);">cubmaster@pack828sc.org</a> or talk to your den leader. We're a small pack &mdash; no question is too small.</p>
+    <p><strong>Resource not working?</strong> Send us a note and we'll fix or replace it in the next refresh.</p>
+    <p>Pack 828 &middot; Compiled May 2026</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('p828-resources');
+  if (!root) return;
+
+  var search = root.querySelector('#p828-search');
+  var fCluster = root.querySelector('#p828-filter-cluster');
+  var fSrc = root.querySelector('#p828-filter-source');
+  var fEss = root.querySelector('#p828-filter-essential');
+  var clearBtn = root.querySelector('#p828-clear');
+  var countEl = root.querySelector('#p828-count');
+  var sections = root.querySelectorAll('.p828-section');
+
+  function applyFilters() {
+    var q = (search.value || '').toLowerCase().trim();
+    var cluster = fCluster.value;
+    var src = fSrc.value;
+    var ess = fEss.value;
+    var totalShown = 0;
+
+    sections.forEach(function (sec) {
+      var secCluster = sec.getAttribute('data-cluster');
+      var cards = sec.querySelectorAll('.p828-card');
+      var visible = 0;
+      cards.forEach(function (card) {
+        var source = (card.getAttribute('data-source') || '').toLowerCase();
+        var essential = (card.getAttribute('data-essential') || '').toLowerCase();
+        var text = card.textContent.toLowerCase();
+
+        var ok = true;
+        if (cluster && cluster !== secCluster) ok = false;
+        if (ok && src && source !== src) ok = false;
+        if (ok && ess === 'yes' && essential !== 'yes') ok = false;
+        if (ok && q && text.indexOf(q) === -1) ok = false;
+
+        card.style.display = ok ? '' : 'none';
+        if (ok) visible++;
+      });
+
+      sec.style.display = (cluster && cluster !== secCluster) ? 'none' : '';
+      var existingEmpty = sec.querySelector('.p828-empty');
+      if (sec.style.display !== 'none' && visible === 0) {
+        if (!existingEmpty) {
+          var div = document.createElement('div');
+          div.className = 'p828-empty';
+          div.textContent = 'No resources match these filters in this section.';
+          sec.querySelector('.p828-grid').appendChild(div);
+        }
+      } else if (existingEmpty) {
+        existingEmpty.remove();
+      }
+      totalShown += visible;
+    });
+
+    countEl.textContent = totalShown + (totalShown === 1 ? ' resource' : ' resources') + ' shown';
+  }
+
+  [search, fCluster, fSrc, fEss].forEach(function (el) {
+    el.addEventListener('input', applyFilters);
+    el.addEventListener('change', applyFilters);
+  });
+
+  clearBtn.addEventListener('click', function () {
+    search.value = '';
+    fCluster.value = '';
+    fSrc.value = '';
+    fEss.value = '';
+    applyFilters();
+  });
+
+  applyFilters();
+})();
+</script>
+</body>
+</html>
