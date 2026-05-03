@@ -6,286 +6,323 @@
 <title>Pack 828 &mdash; Cub Scout Leader Resources</title>
 <meta name="description" content="A free, curated resource library for Cub Scout leaders and volunteers in Pack 828: adventure plans, ceremony scripts, and traditions for Lion through Arrow of Light, with mixed-rank den support.">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Pack 828 — Cub Scout Leader Resources">
-<meta property="og:description" content="Curated free resources for Cub Scout leaders: adventure plans, ceremonies, and traditions across all ranks.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-  html, body { margin: 0; padding: 0; background: #0033a0; }
-  body { min-height: 100vh; }
-  .p828-resources {
-    --p828-navy: #0033a0;
-    --p828-navy-dark: #00226b;
-    --p828-gold: #f2a900;
-    --p828-gold-deep: #c98a00;
-    --p828-gold-soft: #fdf1cc;
-    --p828-ink: #1c1c1c;
-    --p828-muted: #5a5a5a;
-    --p828-line: #dde2ea;
-    --p828-bg: #f6f8fc;
-    --p828-warn-bg: #fff4e0;
-    --p828-warn-bd: #d68b00;
-    --p828-tag-bg: #eaf0fa;
-    --p828-heading-font: 'Lora', Georgia, 'Times New Roman', serif;
-    --p828-body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-family: var(--p828-body-font);
-    color: var(--p828-ink);
-    line-height: 1.55;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 16px 20px 48px;
-    box-sizing: border-box;
-  }
-  .p828-resources h1, .p828-resources h2, .p828-resources h3 {
-    font-family: var(--p828-heading-font);
-    font-weight: 700;
-    letter-spacing: 0.005em;
-  }
-  .p828-resources *, .p828-resources *::before, .p828-resources *::after { box-sizing: border-box; }
+/* ── BSA / Pack 828 palette ──────────────────────────────── */
+:root {
+  --navy:   #0033a0;
+  --navy-d: #00226b;
+  --gold:   #f2a900;
+  --gold-d: #c98a00;
+  --gold-s: #fdf1cc;
+  --red:    #BE0000;
+  --white:  #ffffff;
+  --text:   #1a1a2e;
+  --muted:  #5a6a82;
+  --border: #cdd5e0;
+  --radius: 8px;
+  --shadow: 0 4px 18px rgba(0,0,0,0.13);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:#0033a0;}
+body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:#0033a0;
+  color:var(--text);
+  padding-bottom:60px;
+  min-height:100vh;
+}
 
-  .p828-hero {
-    color: #fff;
-    padding: 24px 8px 28px;
-    border-bottom: 3px solid var(--p828-gold);
-    margin-bottom: 8px;
-  }
-  .p828-hero h1 {
-    margin: 0 0 10px;
-    font-size: 2.25rem;
-    color: var(--p828-gold);
-    letter-spacing: 0.005em;
-    line-height: 1.2;
-  }
-  .p828-hero p  { margin: 0; color: #fff; opacity: 0.95; max-width: 70ch; font-size: 1.05rem; }
-  .p828-hero .p828-meta { margin-top: 14px; font-size: 0.85rem; color: var(--p828-gold-soft); opacity: 0.9; }
+/* ── Header (matches photo gallery exactly) ───────────────── */
+.site-header{
+  background:#0033a0;
+  color:var(--white);
+  text-align:center;
+  padding:28px 16px 22px;
+  border-bottom:4px solid var(--gold);
+}
+.site-header h1{
+  font-size:clamp(1.3rem,4vw,2rem);
+  font-weight:700;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+.site-header .subtitle{
+  font-size:0.82rem;
+  color:var(--gold);
+  font-weight:700;
+  margin-top:4px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+.fleur{color:var(--gold);font-size:1.2em;margin:0 8px;}
 
-  .p828-callout {
-    background: var(--p828-warn-bg);
-    border: 1px solid var(--p828-warn-bd);
-    border-left: 5px solid var(--p828-gold);
-    border-radius: 10px;
-    padding: 14px 18px;
-    margin: 22px 0;
-    font-size: 0.93rem;
-    color: #5a3e00;
-  }
-  .p828-callout strong { color: var(--p828-gold-deep); }
+/* ── Page wrap ────────────────────────────────────────────── */
+.page{
+  max-width:1280px;
+  margin:0 auto;
+  padding:18px 18px 0;
+}
 
-  .p828-toolbar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    margin: 20px 0 14px;
-    padding: 14px;
-    background: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 12px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-  }
-  .p828-toolbar input[type="search"] {
-    flex: 1 1 220px;
-    min-width: 180px;
-    padding: 10px 12px;
-    border: 1px solid var(--p828-line);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    background: #fff;
-  }
-  .p828-toolbar input[type="search"]:focus {
-    outline: 2px solid var(--p828-gold);
-    outline-offset: 1px;
-    border-color: var(--p828-navy);
-  }
-  .p828-toolbar select:focus {
-    outline: 2px solid var(--p828-gold);
-    outline-offset: 1px;
-  }
-  .p828-toolbar select {
-    padding: 10px 12px;
-    border: 1px solid var(--p828-line);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    background: #fff;
-    cursor: pointer;
-  }
-  .p828-toolbar .p828-count {
-    margin-left: auto;
-    font-size: 0.85rem;
-    color: var(--p828-muted);
-  }
-  .p828-toolbar .p828-clear {
-    background: transparent;
-    border: 1px solid var(--p828-line);
-    color: var(--p828-muted);
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    cursor: pointer;
-  }
-  .p828-toolbar .p828-clear:hover { background: #fff; color: var(--p828-ink); }
+/* ── Intro / lede on navy ─────────────────────────────────── */
+.lede{
+  color:#fff;
+  text-align:center;
+  margin:18px auto 8px;
+  max-width:78ch;
+  font-size:0.98rem;
+  line-height:1.55;
+}
+.lede .stamp{
+  display:inline-block;
+  margin-top:10px;
+  font-size:0.78rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+}
 
-  .p828-section {
-    margin-top: 36px;
-  }
-  .p828-section h2 {
-    font-size: 1.45rem;
-    margin: 0 0 6px;
-    color: var(--p828-gold);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border-bottom: 2px solid var(--p828-gold);
-    padding-bottom: 8px;
-  }
-  .p828-section h2::before {
-    content: "";
-    display: inline-block;
-    width: 6px; height: 26px;
-    background: var(--p828-gold);
-    border-radius: 3px;
-  }
-  .p828-section .p828-sub {
-    margin: 0 0 14px 18px;
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 0.94rem;
-  }
+/* ── Callout ──────────────────────────────────────────────── */
+.callout{
+  background:#fff4e0;
+  border:1px solid #d68b00;
+  border-left:5px solid var(--gold);
+  border-radius:var(--radius);
+  padding:14px 18px;
+  margin:20px 0 8px;
+  font-size:0.92rem;
+  color:#5a3e00;
+  box-shadow:var(--shadow);
+}
+.callout strong{color:var(--gold-d);}
 
-  .p828-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    gap: 14px;
-  }
-  .p828-card {
-    background: #fff;
-    border: 1px solid var(--p828-line);
-    border-radius: 12px;
-    padding: 16px 16px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    transition: box-shadow .15s, transform .15s;
-  }
-  .p828-card:hover {
-    box-shadow: 0 4px 14px rgba(0, 51, 160, 0.12);
-    border-color: var(--p828-gold);
-    transform: translateY(-1px);
-  }
-  .p828-card h3 {
-    font-size: 1.08rem;
-    margin: 0;
-    line-height: 1.3;
-    font-weight: 600;
-  }
-  .p828-card h3 a {
-    color: var(--p828-navy);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color .15s, color .15s;
-  }
-  .p828-card h3 a:hover {
-    color: var(--p828-navy-dark);
-    border-bottom-color: var(--p828-gold);
-  }
-  .p828-card .p828-desc {
-    margin: 0;
-    font-size: 0.92rem;
-    color: var(--p828-ink);
-  }
-  .p828-card .p828-url {
-    font-size: 0.78rem;
-    color: var(--p828-muted);
-    word-break: break-all;
-  }
-  .p828-card .p828-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 4px;
-  }
-  .p828-tag {
-    font-size: 0.72rem;
-    background: var(--p828-tag-bg);
-    color: var(--p828-navy-dark);
-    padding: 3px 9px;
-    border-radius: 999px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    font-family: var(--p828-body-font);
-  }
-  .p828-tag.p828-mixed { background: var(--p828-gold-soft); color: var(--p828-gold-deep); }
-  .p828-tag.p828-source-official { background: #dde6f5; color: var(--p828-navy-dark); }
-  .p828-tag.p828-source-blog { background: #e6f4ea; color: #1e6b34; }
-  .p828-tag.p828-source-archive { background: #ede4f3; color: #5d2f7a; }
-  .p828-tag.p828-source-forum { background: #fbe4e4; color: #8a2424; }
-  .p828-tag.p828-source-tool { background: #e1eef2; color: #1e5969; }
+/* ── Toolbar ──────────────────────────────────────────────── */
+.toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  margin:18px 0 14px;
+  padding:14px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.toolbar input[type="search"]{
+  flex:1 1 220px;
+  min-width:180px;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  font-size:0.95rem;
+  background:#fff;
+  font-family:inherit;
+}
+.toolbar input[type="search"]:focus,
+.toolbar select:focus{
+  outline:2px solid var(--gold);
+  outline-offset:1px;
+  border-color:var(--navy);
+}
+.toolbar select{
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  font-size:0.95rem;
+  background:#fff;
+  cursor:pointer;
+  font-family:inherit;
+}
+.toolbar .count{
+  margin-left:auto;
+  font-size:0.85rem;
+  color:var(--muted);
+}
+.toolbar .clear{
+  background:transparent;
+  border:1px solid var(--border);
+  color:var(--muted);
+  padding:8px 12px;
+  border-radius:var(--radius);
+  font-size:0.85rem;
+  cursor:pointer;
+  font-family:inherit;
+}
+.toolbar .clear:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
 
-  .p828-flag {
-    font-size: 0.83rem;
-    background: var(--p828-warn-bg);
-    border-left: 3px solid var(--p828-gold);
-    padding: 7px 11px;
-    border-radius: 5px;
-    color: #5a3e00;
-    margin-top: 4px;
-  }
+/* ── Sections ─────────────────────────────────────────────── */
+.section{margin-top:32px;}
+.section-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border-bottom:3px solid var(--gold);
+  padding-bottom:10px;
+  margin-bottom:6px;
+}
+.section-head h2{
+  font-size:clamp(1.05rem,2.4vw,1.35rem);
+  font-weight:700;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+  margin:0;
+}
+.section-head h2::before{
+  content:"";
+  display:inline-block;
+  width:6px; height:22px;
+  background:var(--gold);
+  border-radius:3px;
+  vertical-align:middle;
+  margin-right:10px;
+}
+.section .sub{
+  margin:6px 4px 14px;
+  color:rgba(255,255,255,0.85);
+  font-size:0.92rem;
+}
 
-  .p828-empty {
-    text-align: center;
-    padding: 40px 20px;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px dashed rgba(255, 255, 255, 0.25);
-    border-radius: 12px;
-    grid-column: 1 / -1;
-  }
+/* ── Cards ────────────────────────────────────────────────── */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:14px;
+}
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px 16px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  box-shadow:var(--shadow);
+  transition:transform .15s, box-shadow .15s, border-color .15s;
+}
+.card:hover{
+  transform:translateY(-2px);
+  border-color:var(--gold);
+  box-shadow:0 6px 22px rgba(0,0,0,0.22);
+}
+.card h3{
+  font-size:1.05rem;
+  margin:0;
+  line-height:1.3;
+  font-weight:700;
+}
+.card h3 a{
+  color:var(--navy);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:border-color .15s, color .15s;
+}
+.card h3 a:hover{
+  color:var(--navy-d);
+  border-bottom-color:var(--gold);
+}
+.card .desc{
+  margin:0;
+  font-size:0.92rem;
+  color:var(--text);
+}
+.card .url{
+  font-size:0.78rem;
+  color:var(--muted);
+  word-break:break-all;
+}
+.card .tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-top:4px;
+}
+.tag{
+  font-size:0.7rem;
+  background:#eaf0fa;
+  color:var(--navy-d);
+  padding:3px 9px;
+  border-radius:999px;
+  font-weight:600;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+.tag.mixed         {background:var(--gold-s);color:var(--gold-d);}
+.tag.s-official    {background:#dde6f5;color:var(--navy-d);}
+.tag.s-blog        {background:#e6f4ea;color:#1e6b34;}
+.tag.s-archive     {background:#ede4f3;color:#5d2f7a;}
+.tag.s-forum       {background:#fbe4e4;color:#8a2424;}
+.tag.s-tool        {background:#e1eef2;color:#1e5969;}
 
-  .p828-footer {
-    margin-top: 48px;
-    padding-top: 20px;
-    border-top: 2px solid var(--p828-gold);
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.88);
-  }
-  .p828-footer p { margin: 6px 0; }
-  .p828-footer strong { color: var(--p828-gold); }
+.flag{
+  font-size:0.82rem;
+  background:#fff4e0;
+  border-left:3px solid var(--gold);
+  padding:7px 11px;
+  border-radius:5px;
+  color:#5a3e00;
+  margin-top:4px;
+}
 
-  @media (max-width: 600px) {
-    .p828-hero { padding: 22px 18px; }
-    .p828-hero h1 { font-size: 1.45rem; }
-    .p828-toolbar .p828-count { margin-left: 0; width: 100%; text-align: right; }
-  }
+.empty{
+  text-align:center;
+  padding:36px 20px;
+  color:#fff;
+  background:rgba(255,255,255,0.08);
+  border:1px dashed rgba(255,255,255,0.25);
+  border-radius:var(--radius);
+  grid-column:1 / -1;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.site-footer{
+  margin-top:42px;
+  padding:22px 18px 4px;
+  border-top:3px solid var(--gold);
+  font-size:0.88rem;
+  color:rgba(255,255,255,0.9);
+  max-width:1280px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.site-footer p{margin:6px 0;}
+.site-footer strong{color:var(--gold);}
+
+@media (max-width:600px){
+  .toolbar .count{margin-left:0;width:100%;text-align:right;}
+}
 </style>
 </head>
 <body>
 
-<div class="p828-resources" id="p828-resources">
-  <header class="p828-hero">
-    <h1>Pack 828 Leader &amp; Volunteer Resource Library</h1>
-    <p>A curated, free collection of Cub Scout adventure-planning and ceremony resources, chosen for a small mixed-rank pack. Use the search and filters below to find what you need fast.</p>
-    <div class="p828-meta">Last reviewed: May 2026 &middot; Covers Lion, Tiger, Wolf, Bear, Webelos, Arrow of Light</div>
-  </header>
+<header class="site-header">
+  <h1><span class="fleur">&#9884;</span>Pack 828 Leader Resources<span class="fleur">&#9884;</span></h1>
+  <div class="subtitle">Conway, SC &bull; Friendship Missionary Baptist Church</div>
+</header>
 
-  <div class="p828-callout">
+<div class="page" id="resources">
+
+  <p class="lede">
+    A curated, free collection of Cub Scout adventure-planning and ceremony resources, chosen for a small mixed-rank pack. Use the search and filters below to find what you need fast.
+    <br><span class="stamp">Last reviewed May 2026 &middot; Lion through Arrow of Light</span>
+  </p>
+
+  <div class="callout">
     <strong>Two things to keep in mind.</strong>
-    <span>(1) The Cub Scout program was refreshed in <strong>June 2024</strong>; many adventure names changed. Always cross-check requirements against the official adventure library before delivering.
-    (2) The organization rebranded to <strong>Scouting America</strong> in February 2025. Some older blog posts and archive scripts still say "BSA" or use the retired Cub Scout Promise / Law of the Pack &mdash; review and refresh that language before reading aloud.</span>
+    (1)&nbsp;The Cub Scout program was refreshed in <strong>June 2024</strong>; many adventure names changed. Always cross-check requirements against the official adventure library before delivering.
+    (2)&nbsp;The organization rebranded to <strong>Scouting America</strong> in February 2025. Some older blog posts and archive scripts still say "BSA" or use the retired Cub Scout Promise / Law of the Pack &mdash; review and refresh that language before reading aloud.
   </div>
 
-  <div class="p828-toolbar">
-    <input type="search" id="p828-search" placeholder="Search resources (e.g. 'bobcat', 'blue and gold', 'wolf')" aria-label="Search resources" />
-    <select id="p828-filter-category" aria-label="Filter by category">
+  <div class="toolbar">
+    <input type="search" id="q" placeholder="Search resources (e.g. 'bobcat', 'blue and gold', 'wolf')" aria-label="Search resources" />
+    <select id="f-cat" aria-label="Filter by category">
       <option value="">All categories</option>
       <option value="adventure">Adventures &amp; Meeting Plans</option>
       <option value="ceremony">Ceremonies &amp; Traditions</option>
       <option value="support">Songs, Skits, Games &amp; STEM</option>
     </select>
-    <select id="p828-filter-rank" aria-label="Filter by rank">
+    <select id="f-rank" aria-label="Filter by rank">
       <option value="">All ranks</option>
       <option value="lion">Lion (K)</option>
       <option value="tiger">Tiger (1st)</option>
@@ -295,7 +332,7 @@
       <option value="aol">Arrow of Light (5th)</option>
       <option value="all">Covers all ranks</option>
     </select>
-    <select id="p828-filter-source" aria-label="Filter by source type">
+    <select id="f-src" aria-label="Filter by source type">
       <option value="">All source types</option>
       <option value="official">Official (Scouting America)</option>
       <option value="blog">Blog</option>
@@ -303,235 +340,230 @@
       <option value="forum">Forum / Community</option>
       <option value="tool">Tool / App</option>
     </select>
-    <select id="p828-filter-mixed" aria-label="Filter by mixed-rank fit">
+    <select id="f-mix" aria-label="Filter by mixed-rank fit">
       <option value="">Any mixed-rank fit</option>
       <option value="yes">Best for mixed-rank dens</option>
     </select>
-    <button class="p828-clear" id="p828-clear">Clear filters</button>
-    <span class="p828-count" id="p828-count"></span>
+    <button class="clear" id="clear">Clear filters</button>
+    <span class="count" id="count"></span>
   </div>
 
   <!-- ============================================================ -->
   <!-- ADVENTURES & MEETING PLANS                                   -->
   <!-- ============================================================ -->
-  <section class="p828-section" data-category="adventure">
-    <h2>Adventures &amp; Meeting Plans</h2>
-    <p class="p828-sub">Official program references, den-meeting playbooks, and rank-by-rank adventure walkthroughs.</p>
-    <div class="p828-grid">
+  <section class="section" data-category="adventure">
+    <div class="section-head"><h2>Adventures &amp; Meeting Plans</h2></div>
+    <p class="sub">Official program references, den-meeting playbooks, and rank-by-rank adventure walkthroughs.</p>
+    <div class="grid">
 
-      <!-- OFFICIAL CORE -->
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://www.cubscouts.org/" target="_blank" rel="noopener">Cub Scouts (Official Program Site)</a></h3>
-        <p class="p828-desc">Scouting America's main hub for the Cub Scout program: rank overviews, parent info, and pathways to leader resources.</p>
-        <p class="p828-url">cubscouts.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Scouting America's main hub for the Cub Scout program: rank overviews, parent info, and pathways to leader resources.</p>
+        <p class="url">cubscouts.org</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://www.scouting.org/programs/cub-scouts/adventures/" target="_blank" rel="noopener">Adventure Library (All Current Adventures)</a></h3>
-        <p class="p828-desc">The authoritative list of every current Cub Scout adventure with requirements, reflecting the June 2024 program refresh. Bookmark this.</p>
-        <p class="p828-url">scouting.org/programs/cub-scouts/adventures/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag p828-mixed">Great for mixed-rank planning</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">The authoritative list of every current Cub Scout adventure with requirements, reflecting the June 2024 program refresh. Bookmark this.</p>
+        <p class="url">scouting.org/programs/cub-scouts/adventures/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag mixed">Great for mixed-rank planning</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://www.scouting.org/programs/cub-scouts/program-updates/" target="_blank" rel="noopener">Program Updates (2024-25 Refresh)</a></h3>
-        <p class="p828-desc">Official documentation of the June 2024 program refresh: renamed adventures, restructured requirements, and what's new vs. retired.</p>
-        <p class="p828-url">scouting.org/programs/cub-scouts/program-updates/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official documentation of the June 2024 program refresh: renamed adventures, restructured requirements, and what's new vs. retired.</p>
+        <p class="url">scouting.org/programs/cub-scouts/program-updates/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://www.scouting.org/programs/cub-scouts/leaders/den-leader-resources/" target="_blank" rel="noopener">Den Leader Resources</a></h3>
-        <p class="p828-desc">Official Den Leader Guides and downloadable adventure plans for each rank &mdash; the day-to-day playbook for running meetings.</p>
-        <p class="p828-url">scouting.org/.../den-leader-resources/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official Den Leader Guides and downloadable adventure plans for each rank &mdash; the day-to-day playbook for running meetings.</p>
+        <p class="url">scouting.org/.../den-leader-resources/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://www.scouting.org/programs/cub-scouts/leaders/" target="_blank" rel="noopener">Cub Scout Leader Resources Hub</a></h3>
-        <p class="p828-desc">Top-level index of all leader-facing tools: training, meeting plans, ceremonies, recognition, and admin.</p>
-        <p class="p828-url">scouting.org/programs/cub-scouts/leaders/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Top-level index of all leader-facing tools: training, meeting plans, ceremonies, recognition, and admin.</p>
+        <p class="url">scouting.org/programs/cub-scouts/leaders/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="tool" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="tool" data-mixed="yes">
         <h3><a href="https://www.scoutbook.com/" target="_blank" rel="noopener">Scoutbook</a></h3>
-        <p class="p828-desc">Official advancement and communication tool. Track adventure completion across mixed-rank dens; sync with Internet Advancement.</p>
-        <p class="p828-url">scoutbook.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-tool">Tool</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official advancement and communication tool. Track adventure completion across mixed-rank dens; sync with Internet Advancement.</p>
+        <p class="url">scoutbook.com</p>
+        <div class="tags">
+          <span class="tag s-tool">Tool</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official">
+      <article class="card" data-ranks="all" data-source="official">
         <h3><a href="https://help.scoutbook.scouting.org/" target="_blank" rel="noopener">Scoutbook Help &amp; Knowledge Base</a></h3>
-        <p class="p828-desc">Searchable how-to articles for Scoutbook, Internet Advancement, and the Scouting App. Worth reading before your first roster headache.</p>
-        <p class="p828-url">help.scoutbook.scouting.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Searchable how-to articles for Scoutbook, Internet Advancement, and the Scouting App. Worth reading before your first roster headache.</p>
+        <p class="url">help.scoutbook.scouting.org</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official">
+      <article class="card" data-ranks="all" data-source="official">
         <h3><a href="https://www.scoutshop.org/" target="_blank" rel="noopener">Scout Shop</a></h3>
-        <p class="p828-desc">Official store for current handbooks, Den Leader Guides, and program literature reflecting the 2024 refresh. Free downloadable supplements occasionally posted.</p>
-        <p class="p828-url">scoutshop.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official store for current handbooks, Den Leader Guides, and program literature reflecting the 2024 refresh. Free downloadable supplements occasionally posted.</p>
+        <p class="url">scoutshop.org</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <!-- BLOGS / ACTIVE COMMUNITIES -->
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://cubscoutideas.com/" target="_blank" rel="noopener">Cub Scout Ideas (Sherry Smothermon-Short)</a></h3>
-        <p class="p828-desc">One of the most active and current Cub Scout blogs. Adventure-by-adventure meeting plans, printables, and ceremonies aligned with the 2024-25 program.</p>
-        <p class="p828-url">cubscoutideas.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">One of the most active and current Cub Scout blogs. Adventure-by-adventure meeting plans, printables, and ceremonies aligned with the 2024-25 program.</p>
+        <p class="url">cubscoutideas.com</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://akelascouncil.com/" target="_blank" rel="noopener">Akela's Council Cub Scout Leader Training</a></h3>
-        <p class="p828-desc">Massive volunteer-built archive of skits, songs, ceremonies, crafts, and themed meeting ideas, organized by topic and printable.</p>
-        <p class="p828-url">akelascouncil.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Massive volunteer-built archive of skits, songs, ceremonies, crafts, and themed meeting ideas, organized by topic and printable.</p>
+        <p class="url">akelascouncil.com</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
-        <p class="p828-flag">Heads up: some content predates the 2024 refresh. Check adventure names and Promise/Law wording before use.</p>
+        <p class="flag">Heads up: some content predates the 2024 refresh. Check adventure names and Promise/Law wording before use.</p>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog">
+      <article class="card" data-ranks="all" data-source="blog">
         <h3><a href="https://blog.scoutingmagazine.org/" target="_blank" rel="noopener">Bryan on Scouting (Scouting Magazine Blog)</a></h3>
-        <p class="p828-desc">Official Scouting America magazine blog. Program news, adventure tips, leader best practices, and reader-shared ideas.</p>
-        <p class="p828-url">blog.scoutingmagazine.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official Scouting America magazine blog. Program news, adventure tips, leader best practices, and reader-shared ideas.</p>
+        <p class="url">blog.scoutingmagazine.org</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://scoutermom.com/" target="_blank" rel="noopener">Scouter Mom</a></h3>
-        <p class="p828-desc">Categorized blog with den meeting ideas, advancement tracking helps, ceremony scripts, and program-tested activities.</p>
-        <p class="p828-url">scoutermom.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Categorized blog with den meeting ideas, advancement tracking helps, ceremony scripts, and program-tested activities.</p>
+        <p class="url">scoutermom.com</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="webelos aol" data-source="blog">
+      <article class="card" data-ranks="webelos aol" data-source="blog">
         <h3><a href="https://scoutsmarts.com/" target="_blank" rel="noopener">ScoutSmarts</a></h3>
-        <p class="p828-desc">Detailed requirement walkthroughs. Mostly Scouts BSA focused, but useful for AOL bridging and the Webelos-to-troop transition.</p>
-        <p class="p828-url">scoutsmarts.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag">Webelos</span>
-          <span class="p828-tag">Arrow of Light</span>
+        <p class="desc">Detailed requirement walkthroughs. Mostly Scouts BSA focused, but useful for AOL bridging and the Webelos-to-troop transition.</p>
+        <p class="url">scoutsmarts.com</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag">Webelos</span>
+          <span class="tag">Arrow of Light</span>
         </div>
       </article>
 
-      <!-- ARCHIVES / PRINTABLES -->
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://usscouts.org/" target="_blank" rel="noopener">U.S. Scouting Service Project</a></h3>
-        <p class="p828-desc">Volunteer-run archive: advancement worksheets, ceremony scripts, training references, and historical materials. Deep but uneven.</p>
-        <p class="p828-url">usscouts.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Volunteer-run archive: advancement worksheets, ceremony scripts, training references, and historical materials. Deep but uneven.</p>
+        <p class="url">usscouts.org</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
-        <p class="p828-flag">Mixed currency &mdash; verify any requirement against the official 2024-25 adventure list before using.</p>
+        <p class="flag">Mixed currency &mdash; verify any requirement against the official 2024-25 adventure list before using.</p>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="archive">
+      <article class="card" data-ranks="all" data-source="archive">
         <h3><a href="https://meritbadge.org/wiki/index.php/Cub_Scouting" target="_blank" rel="noopener">MeritBadge.org &mdash; Cub Scouting</a></h3>
-        <p class="p828-desc">Volunteer-contributed worksheets, requirement-tracking sheets, and adventure references in wiki format.</p>
-        <p class="p828-url">meritbadge.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Volunteer-contributed worksheets, requirement-tracking sheets, and adventure references in wiki format.</p>
+        <p class="url">meritbadge.org</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag">All ranks</span>
         </div>
-        <p class="p828-flag">Some pages predate the 2024 refresh. Treat as a starting point, not the source of truth.</p>
+        <p class="flag">Some pages predate the 2024 refresh. Treat as a starting point, not the source of truth.</p>
       </article>
 
-      <!-- FORUMS / COMMUNITY -->
-      <article class="p828-card" data-ranks="all" data-source="forum" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="forum" data-mixed="yes">
         <h3><a href="https://www.reddit.com/r/cubscouts/" target="_blank" rel="noopener">r/cubscouts (Reddit)</a></h3>
-        <p class="p828-desc">Cub-specific subreddit. Frequent threads on combining ranks in small packs, advancement shortcuts, and recruiting.</p>
-        <p class="p828-url">reddit.com/r/cubscouts</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-forum">Forum</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Cub-specific subreddit. Frequent threads on combining ranks in small packs, advancement shortcuts, and recruiting.</p>
+        <p class="url">reddit.com/r/cubscouts</p>
+        <div class="tags">
+          <span class="tag s-forum">Forum</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="forum" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="forum" data-mixed="yes">
         <h3><a href="https://www.reddit.com/r/BSA/" target="_blank" rel="noopener">r/BSA (Reddit)</a></h3>
-        <p class="p828-desc">Broader Scouting America community. Program-change discussion, mixed-rank den strategies, and advancement Q&amp;A.</p>
-        <p class="p828-url">reddit.com/r/BSA</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-forum">Forum</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Broader Scouting America community. Program-change discussion, mixed-rank den strategies, and advancement Q&amp;A.</p>
+        <p class="url">reddit.com/r/BSA</p>
+        <div class="tags">
+          <span class="tag s-forum">Forum</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="forum">
+      <article class="card" data-ranks="all" data-source="forum">
         <h3><a href="https://www.scouter.com/" target="_blank" rel="noopener">Scouter.com Forums</a></h3>
-        <p class="p828-desc">Long-running independent Scouting forum. Searchable archive of den-leadership and program-delivery discussions going back many years.</p>
-        <p class="p828-url">scouter.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-forum">Forum</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Long-running independent Scouting forum. Searchable archive of den-leadership and program-delivery discussions going back many years.</p>
+        <p class="url">scouter.com</p>
+        <div class="tags">
+          <span class="tag s-forum">Forum</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <!-- VIDEO -->
-      <article class="p828-card" data-ranks="all" data-source="official">
+      <article class="card" data-ranks="all" data-source="official">
         <h3><a href="https://www.youtube.com/@scoutingamerica" target="_blank" rel="noopener">Scouting America (YouTube)</a></h3>
-        <p class="p828-desc">Official channel: program update videos, training overviews, recruiting content, and ceremony examples.</p>
-        <p class="p828-url">youtube.com/@scoutingamerica</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official channel: program update videos, training overviews, recruiting content, and ceremony examples.</p>
+        <p class="url">youtube.com/@scoutingamerica</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog">
+      <article class="card" data-ranks="all" data-source="blog">
         <h3><a href="https://www.pinterest.com/search/pins/?q=cub%20scout%20den%20meeting" target="_blank" rel="noopener">Pinterest &mdash; Cub Scout Den Meetings</a></h3>
-        <p class="p828-desc">Crowd-curated boards of printables, craft templates, decorations, and themed meeting ideas across all ranks.</p>
-        <p class="p828-url">pinterest.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Crowd-curated</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Crowd-curated boards of printables, craft templates, decorations, and themed meeting ideas across all ranks.</p>
+        <p class="url">pinterest.com</p>
+        <div class="tags">
+          <span class="tag s-blog">Crowd-curated</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
@@ -541,370 +573,359 @@
   <!-- ============================================================ -->
   <!-- CEREMONIES & TRADITIONS                                      -->
   <!-- ============================================================ -->
-  <section class="p828-section" data-category="ceremony">
-    <h2>Ceremonies &amp; Traditions</h2>
-    <p class="p828-sub">Bobcat, rank advancement, Arrow of Light, bridging, Blue &amp; Gold, opening/closing, and campfire ceremonies.</p>
-    <div class="p828-grid">
+  <section class="section" data-category="ceremony">
+    <div class="section-head"><h2>Ceremonies &amp; Traditions</h2></div>
+    <p class="sub">Bobcat, rank advancement, Arrow of Light, bridging, Blue &amp; Gold, opening/closing, and campfire ceremonies.</p>
+    <div class="grid">
 
-      <!-- COMPREHENSIVE ARCHIVES -->
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://usscouts.org/ceremony/ceremony.asp" target="_blank" rel="noopener">USSSP Ceremonies Index</a></h3>
-        <p class="p828-desc">The single largest free public archive of Cub Scout ceremony scripts &mdash; hundreds, organized by category (Bobcat, advancement, AOL, B&amp;G, opening/closing, campfire, crossover, investiture).</p>
-        <p class="p828-url">usscouts.org/ceremony/ceremony.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag">All ceremonies</span>
+        <p class="desc">The single largest free public archive of Cub Scout ceremony scripts &mdash; hundreds, organized by category (Bobcat, advancement, AOL, B&amp;G, opening/closing, campfire, crossover, investiture).</p>
+        <p class="url">usscouts.org/ceremony/ceremony.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag">All ceremonies</span>
         </div>
-        <p class="p828-flag">Many scripts are 1990s-2000s vintage. Review for retired Cub Scout Promise/Law of the Pack wording and Native American imagery before reading aloud.</p>
+        <p class="flag">Many scripts are 1990s-2000s vintage. Review for retired Cub Scout Promise/Law of the Pack wording and Native American imagery before reading aloud.</p>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="http://www.macscouter.com/Ceremonies/" target="_blank" rel="noopener">MacScouter Ceremonies Collection</a></h3>
-        <p class="p828-desc">Long-running volunteer archive: opening/closing, advancement, AOL, B&amp;G, campfire, crossover, investiture &mdash; categorized and searchable.</p>
-        <p class="p828-url">macscouter.com/Ceremonies/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag">All ceremonies</span>
+        <p class="desc">Long-running volunteer archive: opening/closing, advancement, AOL, B&amp;G, campfire, crossover, investiture &mdash; categorized and searchable.</p>
+        <p class="url">macscouter.com/Ceremonies/</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag">All ceremonies</span>
         </div>
-        <p class="p828-flag">Older scripts include heavy "Indian lore" themes &mdash; revise language before use.</p>
+        <p class="flag">Older scripts include heavy "Indian lore" themes &mdash; revise language before use.</p>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://akelascouncil.com/category/ceremonies/" target="_blank" rel="noopener">Akela's Council &mdash; Ceremonies</a></h3>
-        <p class="p828-desc">Active blog with downloadable, printable ceremony scripts and props lists for every rank and pack-meeting moment.</p>
-        <p class="p828-url">akelascouncil.com/category/ceremonies/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag">All ceremonies</span>
+        <p class="desc">Active blog with downloadable, printable ceremony scripts and props lists for every rank and pack-meeting moment.</p>
+        <p class="url">akelascouncil.com/category/ceremonies/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag">All ceremonies</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://cubscoutideas.com/category/ceremonies/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; Ceremonies</a></h3>
-        <p class="p828-desc">Modern, regularly updated ceremony scripts and printable handouts. One of the most current free sources, written for today's program.</p>
-        <p class="p828-url">cubscoutideas.com/category/ceremonies/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ceremonies</span>
+        <p class="desc">Modern, regularly updated ceremony scripts and printable handouts. One of the most current free sources, written for today's program.</p>
+        <p class="url">cubscoutideas.com/category/ceremonies/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ceremonies</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog">
+      <article class="card" data-ranks="all" data-source="blog">
         <h3><a href="https://scoutermom.com/category/ceremonies/" target="_blank" rel="noopener">Scouter Mom &mdash; Ceremonies</a></h3>
-        <p class="p828-desc">Categorized blog archive of opening/closing readings, advancement scripts, AOL ceremonies, B&amp;G, and crossovers.</p>
-        <p class="p828-url">scoutermom.com/category/ceremonies/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag">All ceremonies</span>
+        <p class="desc">Categorized blog archive of opening/closing readings, advancement scripts, AOL ceremonies, B&amp;G, and crossovers.</p>
+        <p class="url">scoutermom.com/category/ceremonies/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag">All ceremonies</span>
         </div>
       </article>
 
-      <!-- BOBCAT -->
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://usscouts.org/ceremony/bobcat.asp" target="_blank" rel="noopener">USSSP &mdash; Bobcat Ceremonies</a></h3>
-        <p class="p828-desc">Dozens of Bobcat induction scripts including the classic upside-down badge tradition.</p>
-        <p class="p828-url">usscouts.org/ceremony/bobcat.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">All new scouts</span>
-          <span class="p828-tag">Bobcat</span>
+        <p class="desc">Dozens of Bobcat induction scripts including the classic upside-down badge tradition.</p>
+        <p class="url">usscouts.org/ceremony/bobcat.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">All new scouts</span>
+          <span class="tag">Bobcat</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://cubscoutideas.com/3984/cub-scout-bobcat-ceremony/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; Bobcat Ceremony</a></h3>
-        <p class="p828-desc">Simple modern Bobcat ceremony script with the upside-down badge tradition explained for parents.</p>
-        <p class="p828-url">cubscoutideas.com/3984/cub-scout-bobcat-ceremony/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">All new scouts</span>
-          <span class="p828-tag">Bobcat</span>
+        <p class="desc">Simple modern Bobcat ceremony script with the upside-down badge tradition explained for parents.</p>
+        <p class="url">cubscoutideas.com/3984/cub-scout-bobcat-ceremony/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">All new scouts</span>
+          <span class="tag">Bobcat</span>
         </div>
       </article>
 
-      <!-- RANK ADVANCEMENT -->
-      <article class="p828-card" data-ranks="tiger wolf bear webelos" data-source="archive">
+      <article class="card" data-ranks="tiger wolf bear webelos" data-source="archive">
         <h3><a href="https://usscouts.org/ceremony/advance.asp" target="_blank" rel="noopener">USSSP &mdash; Advancement Ceremonies</a></h3>
-        <p class="p828-desc">Themed advancement ceremony scripts (sports, space, nature, candle, flashlight) grouped by rank.</p>
-        <p class="p828-url">usscouts.org/ceremony/advance.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag">Tiger</span><span class="p828-tag">Wolf</span><span class="p828-tag">Bear</span><span class="p828-tag">Webelos</span>
+        <p class="desc">Themed advancement ceremony scripts (sports, space, nature, candle, flashlight) grouped by rank.</p>
+        <p class="url">usscouts.org/ceremony/advance.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag">Tiger</span><span class="tag">Wolf</span><span class="tag">Bear</span><span class="tag">Webelos</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="lion" data-source="blog">
+      <article class="card" data-ranks="lion" data-source="blog">
         <h3><a href="https://cubscoutideas.com/8654/lion-graduation-ceremony/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; Lion Graduation Ceremony</a></h3>
-        <p class="p828-desc">Modern ceremony tailored specifically for kindergarten Lions advancing to Tiger.</p>
-        <p class="p828-url">cubscoutideas.com/8654/lion-graduation-ceremony/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag">Lion</span>
+        <p class="desc">Modern ceremony tailored specifically for kindergarten Lions advancing to Tiger.</p>
+        <p class="url">cubscoutideas.com/8654/lion-graduation-ceremony/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag">Lion</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="wolf" data-source="blog">
+      <article class="card" data-ranks="wolf" data-source="blog">
         <h3><a href="https://scoutermom.com/2362/wolf-advancement-ceremony/" target="_blank" rel="noopener">Scouter Mom &mdash; Wolf Advancement</a></h3>
-        <p class="p828-desc">Short Wolf advancement ceremony with parent involvement.</p>
-        <p class="p828-url">scoutermom.com/2362/wolf-advancement-ceremony/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag">Wolf</span>
+        <p class="desc">Short Wolf advancement ceremony with parent involvement.</p>
+        <p class="url">scoutermom.com/2362/wolf-advancement-ceremony/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag">Wolf</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="tiger wolf bear webelos" data-source="blog">
+      <article class="card" data-ranks="tiger wolf bear webelos" data-source="blog">
         <h3><a href="https://akelascouncil.com/category/ceremonies/advancement-ceremony/" target="_blank" rel="noopener">Akela's Council &mdash; Advancement Ceremonies</a></h3>
-        <p class="p828-desc">Themed advancement scripts (candle, flashlight, sports) with printable PDFs across all advancing ranks.</p>
-        <p class="p828-url">akelascouncil.com/category/ceremonies/advancement-ceremony/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag">Tiger</span><span class="p828-tag">Wolf</span><span class="p828-tag">Bear</span><span class="p828-tag">Webelos</span>
+        <p class="desc">Themed advancement scripts (candle, flashlight, sports) with printable PDFs across all advancing ranks.</p>
+        <p class="url">akelascouncil.com/category/ceremonies/advancement-ceremony/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag">Tiger</span><span class="tag">Wolf</span><span class="tag">Bear</span><span class="tag">Webelos</span>
         </div>
       </article>
 
-      <!-- ARROW OF LIGHT -->
-      <article class="p828-card" data-ranks="webelos aol" data-source="archive">
+      <article class="card" data-ranks="webelos aol" data-source="archive">
         <h3><a href="https://usscouts.org/ceremony/webelos.asp" target="_blank" rel="noopener">USSSP &mdash; Arrow of Light / Webelos</a></h3>
-        <p class="p828-desc">Multi-script archive of AOL ceremonies: bridge crossovers, arrow presentation, candle ceremonies.</p>
-        <p class="p828-url">usscouts.org/ceremony/webelos.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag">Webelos</span><span class="p828-tag">Arrow of Light</span>
+        <p class="desc">Multi-script archive of AOL ceremonies: bridge crossovers, arrow presentation, candle ceremonies.</p>
+        <p class="url">usscouts.org/ceremony/webelos.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag">Webelos</span><span class="tag">Arrow of Light</span>
         </div>
-        <p class="p828-flag">Many scripts include Native American imagery (arrow/Akela themes). Revise per current cultural-sensitivity guidance before delivering.</p>
+        <p class="flag">Many scripts include Native American imagery (arrow/Akela themes). Revise per current cultural-sensitivity guidance before delivering.</p>
       </article>
 
-      <article class="p828-card" data-ranks="aol" data-source="archive">
+      <article class="card" data-ranks="aol" data-source="archive">
         <h3><a href="http://www.macscouter.com/Ceremonies/AOL.html" target="_blank" rel="noopener">MacScouter &mdash; Arrow of Light Ceremonies</a></h3>
-        <p class="p828-desc">Compiled AOL ceremony scripts with bridge, arrow, and candle variations.</p>
-        <p class="p828-url">macscouter.com/Ceremonies/AOL.html</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag">Arrow of Light</span>
+        <p class="desc">Compiled AOL ceremony scripts with bridge, arrow, and candle variations.</p>
+        <p class="url">macscouter.com/Ceremonies/AOL.html</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag">Arrow of Light</span>
         </div>
-        <p class="p828-flag">Pre-2020 scripts. Cultural review recommended before use.</p>
+        <p class="flag">Pre-2020 scripts. Cultural review recommended before use.</p>
       </article>
 
-      <article class="p828-card" data-ranks="aol" data-source="blog">
+      <article class="card" data-ranks="aol" data-source="blog">
         <h3><a href="https://cubscoutideas.com/6837/arrow-of-light-ceremony/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; Arrow of Light Ceremony</a></h3>
-        <p class="p828-desc">Modern AOL ceremony script and presentation arrow ideas, written with current program language.</p>
-        <p class="p828-url">cubscoutideas.com/6837/arrow-of-light-ceremony/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag">Arrow of Light</span>
+        <p class="desc">Modern AOL ceremony script and presentation arrow ideas, written with current program language.</p>
+        <p class="url">cubscoutideas.com/6837/arrow-of-light-ceremony/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag">Arrow of Light</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="aol" data-source="official">
+      <article class="card" data-ranks="aol" data-source="official">
         <h3><a href="https://blog.scoutingmagazine.org/?s=arrow+of+light" target="_blank" rel="noopener">Bryan on Scouting &mdash; Arrow of Light Articles</a></h3>
-        <p class="p828-desc">Search results for AOL ceremony coverage on the official magazine blog: planning advice, crossover ideas, reader-submitted variations.</p>
-        <p class="p828-url">blog.scoutingmagazine.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">Arrow of Light</span>
+        <p class="desc">Search results for AOL ceremony coverage on the official magazine blog: planning advice, crossover ideas, reader-submitted variations.</p>
+        <p class="url">blog.scoutingmagazine.org</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">Arrow of Light</span>
         </div>
       </article>
 
-      <!-- BRIDGING / CROSSOVER -->
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://usscouts.org/ceremony/graduate.asp" target="_blank" rel="noopener">USSSP &mdash; Crossover &amp; Graduation</a></h3>
-        <p class="p828-desc">Bridge, candle, and den-graduation scripts for moving between any two ranks &mdash; useful for an annual mixed-rank ceremony.</p>
-        <p class="p828-url">usscouts.org/ceremony/graduate.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Bridge, candle, and den-graduation scripts for moving between any two ranks &mdash; useful for an annual mixed-rank ceremony.</p>
+        <p class="url">usscouts.org/ceremony/graduate.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://cubscoutideas.com/4866/cub-scout-bridging-ceremony/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; Bridging Ceremony</a></h3>
-        <p class="p828-desc">Reusable bridging-ceremony script with neckerchief swap. Works for any rank-to-rank transition &mdash; ideal for a small pack with multiple ranks moving up at once.</p>
-        <p class="p828-url">cubscoutideas.com/4866/cub-scout-bridging-ceremony/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Reusable bridging-ceremony script with neckerchief swap. Works for any rank-to-rank transition &mdash; ideal for a small pack with multiple ranks moving up at once.</p>
+        <p class="url">cubscoutideas.com/4866/cub-scout-bridging-ceremony/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <!-- BLUE & GOLD -->
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://blog.scoutingmagazine.org/tag/blue-and-gold/" target="_blank" rel="noopener">Bryan on Scouting &mdash; Blue &amp; Gold Tag</a></h3>
-        <p class="p828-desc">Aggregated B&amp;G banquet planning articles from the official magazine blog: themes, budgets, food, programs.</p>
-        <p class="p828-url">blog.scoutingmagazine.org/tag/blue-and-gold/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Aggregated B&amp;G banquet planning articles from the official magazine blog: themes, budgets, food, programs.</p>
+        <p class="url">blog.scoutingmagazine.org/tag/blue-and-gold/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://cubscoutideas.com/category/blue-gold/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; Blue &amp; Gold</a></h3>
-        <p class="p828-desc">Multi-post category covering B&amp;G planning checklists, themes, decorations, and ceremony scripts.</p>
-        <p class="p828-url">cubscoutideas.com/category/blue-gold/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Multi-post category covering B&amp;G planning checklists, themes, decorations, and ceremony scripts.</p>
+        <p class="url">cubscoutideas.com/category/blue-gold/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://usscouts.org/ceremony/bluegold.asp" target="_blank" rel="noopener">USSSP &mdash; Blue &amp; Gold Ceremonies</a></h3>
-        <p class="p828-desc">Archive of B&amp;G banquet opening, closing, and toasting scripts.</p>
-        <p class="p828-url">usscouts.org/ceremony/bluegold.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Archive of B&amp;G banquet opening, closing, and toasting scripts.</p>
+        <p class="url">usscouts.org/ceremony/bluegold.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official">
+      <article class="card" data-ranks="all" data-source="official">
         <h3><a href="https://www.scouting.org/programs/cub-scouts/about/" target="_blank" rel="noopener">About Cub Scouting (B&amp;G Context)</a></h3>
-        <p class="p828-desc">Official program information including the history and purpose of the Blue &amp; Gold banquet tradition.</p>
-        <p class="p828-url">scouting.org/programs/cub-scouts/about/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official program information including the history and purpose of the Blue &amp; Gold banquet tradition.</p>
+        <p class="url">scouting.org/programs/cub-scouts/about/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <!-- OPENING / CLOSING / FLAG -->
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://usscouts.org/ceremony/openclos.asp" target="_blank" rel="noopener">USSSP &mdash; Openings &amp; Closings</a></h3>
-        <p class="p828-desc">Hundreds of scripts: flag presentations, audience-participation openings, themed closings. Great for rotating fresh material.</p>
-        <p class="p828-url">usscouts.org/ceremony/openclos.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Hundreds of scripts: flag presentations, audience-participation openings, themed closings. Great for rotating fresh material.</p>
+        <p class="url">usscouts.org/ceremony/openclos.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
-        <p class="p828-flag">Substitute the Scout Oath/Scout Law where older scripts reference the retired Cub Scout Promise / Law of the Pack.</p>
+        <p class="flag">Substitute the Scout Oath/Scout Law where older scripts reference the retired Cub Scout Promise / Law of the Pack.</p>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="http://www.macscouter.com/Ceremonies/Openings.html" target="_blank" rel="noopener">MacScouter &mdash; Openings &amp; Closings</a></h3>
-        <p class="p828-desc">Categorized archive of opening and closing scripts, including flag-folding readings.</p>
-        <p class="p828-url">macscouter.com/Ceremonies/Openings.html</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Categorized archive of opening and closing scripts, including flag-folding readings.</p>
+        <p class="url">macscouter.com/Ceremonies/Openings.html</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official">
+      <article class="card" data-ranks="all" data-source="official">
         <h3><a href="https://www.scouting.org/resources/los/flag/" target="_blank" rel="noopener">Flag Ceremony Guidance (Official)</a></h3>
-        <p class="p828-desc">Official protocol for flag ceremonies, folding, and display in Scouting events.</p>
-        <p class="p828-url">scouting.org/resources/los/flag/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official protocol for flag ceremonies, folding, and display in Scouting events.</p>
+        <p class="url">scouting.org/resources/los/flag/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <!-- AKELA / CULTURAL REVIEW REFERENCE -->
-      <article class="p828-card" data-ranks="all" data-source="official">
+      <article class="card" data-ranks="all" data-source="official">
         <h3><a href="https://blog.scoutingmagazine.org/?s=native+american" target="_blank" rel="noopener">Bryan on Scouting &mdash; Cultural Sensitivity Guidance</a></h3>
-        <p class="p828-desc">Articles explaining current Scouting America guidance on Native American imagery in programs and ceremonies. Use this as the lens for evaluating older Akela scripts.</p>
-        <p class="p828-url">blog.scoutingmagazine.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Articles explaining current Scouting America guidance on Native American imagery in programs and ceremonies. Use this as the lens for evaluating older Akela scripts.</p>
+        <p class="url">blog.scoutingmagazine.org</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <!-- CAMPFIRE -->
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="http://www.macscouter.com/Campfires/" target="_blank" rel="noopener">MacScouter Campfire Program Planner</a></h3>
-        <p class="p828-desc">Comprehensive campfire-program archive: opening fire-lighting ceremonies, closing thoughts, and full sample programs.</p>
-        <p class="p828-url">macscouter.com/Campfires/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Comprehensive campfire-program archive: opening fire-lighting ceremonies, closing thoughts, and full sample programs.</p>
+        <p class="url">macscouter.com/Campfires/</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
-        <p class="p828-flag">Skip the "Indian lore" sub-sections; they don't align with current cultural-sensitivity guidance.</p>
+        <p class="flag">Skip the "Indian lore" sub-sections; they don't align with current cultural-sensitivity guidance.</p>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="archive">
+      <article class="card" data-ranks="all" data-source="archive">
         <h3><a href="https://usscouts.org/ceremony/campfire.asp" target="_blank" rel="noopener">USSSP &mdash; Campfire Ceremonies</a></h3>
-        <p class="p828-desc">Scripts for campfire openings (including the four-color fire-lighting) and reflective closings.</p>
-        <p class="p828-url">usscouts.org/ceremony/campfire.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Scripts for campfire openings (including the four-color fire-lighting) and reflective closings.</p>
+        <p class="url">usscouts.org/ceremony/campfire.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <!-- PINEWOOD DERBY -->
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://www.scouting.org/programs/cub-scouts/pinewood-derby/" target="_blank" rel="noopener">Pinewood Derby (Official)</a></h3>
-        <p class="p828-desc">Official PWD resource hub: rules, planning, and a downloadable kit including award-ceremony suggestions.</p>
-        <p class="p828-url">scouting.org/programs/cub-scouts/pinewood-derby/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official PWD resource hub: rules, planning, and a downloadable kit including award-ceremony suggestions.</p>
+        <p class="url">scouting.org/programs/cub-scouts/pinewood-derby/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://cubscoutideas.com/category/pinewood-derby/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; Pinewood Derby</a></h3>
-        <p class="p828-desc">Active blog category: PWD opening ceremony scripts, award ideas, and printable certificates.</p>
-        <p class="p828-url">cubscoutideas.com/category/pinewood-derby/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Active blog category: PWD opening ceremony scripts, award ideas, and printable certificates.</p>
+        <p class="url">cubscoutideas.com/category/pinewood-derby/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official">
+      <article class="card" data-ranks="all" data-source="official">
         <h3><a href="https://blog.scoutingmagazine.org/tag/pinewood-derby/" target="_blank" rel="noopener">Bryan on Scouting &mdash; Pinewood Derby Tag</a></h3>
-        <p class="p828-desc">Official magazine-blog archive of PWD articles including award-ceremony best practices.</p>
-        <p class="p828-url">blog.scoutingmagazine.org/tag/pinewood-derby/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official magazine-blog archive of PWD articles including award-ceremony best practices.</p>
+        <p class="url">blog.scoutingmagazine.org/tag/pinewood-derby/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <!-- INVESTITURE / WELCOME -->
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://usscouts.org/ceremony/induct.asp" target="_blank" rel="noopener">USSSP &mdash; Investiture &amp; Welcome</a></h3>
-        <p class="p828-desc">Archive of new-scout induction and investiture scripts, including parent-pinning ceremonies.</p>
-        <p class="p828-url">usscouts.org/ceremony/induct.asp</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">All new scouts</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Archive of new-scout induction and investiture scripts, including parent-pinning ceremonies.</p>
+        <p class="url">usscouts.org/ceremony/induct.asp</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">All new scouts</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://akelascouncil.com/category/ceremonies/new-scout-ceremony/" target="_blank" rel="noopener">Akela's Council &mdash; New Scout Welcome</a></h3>
-        <p class="p828-desc">Printable welcome and investiture ceremony scripts including candle-lighting variations.</p>
-        <p class="p828-url">akelascouncil.com/category/ceremonies/new-scout-ceremony/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">All new scouts</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Printable welcome and investiture ceremony scripts including candle-lighting variations.</p>
+        <p class="url">akelascouncil.com/category/ceremonies/new-scout-ceremony/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">All new scouts</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official">
+      <article class="card" data-ranks="all" data-source="official">
         <h3><a href="https://scoutlife.org/" target="_blank" rel="noopener">Scout Life Magazine</a></h3>
-        <p class="p828-desc">Official Scouting America youth magazine. Feature articles on traditions, B&amp;G, PWD, and AOL background &mdash; great for parents and scouts to read together.</p>
-        <p class="p828-url">scoutlife.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official Scouting America youth magazine. Feature articles on traditions, B&amp;G, PWD, and AOL background &mdash; great for parents and scouts to read together.</p>
+        <p class="url">scoutlife.org</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
@@ -912,185 +933,183 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- SONGS, SKITS, GAMES, STEM (supporting content)              -->
+  <!-- SONGS, SKITS, GAMES, STEM                                    -->
   <!-- ============================================================ -->
-  <section class="p828-section" data-category="support">
-    <h2>Songs, Skits, Games &amp; STEM Support</h2>
-    <p class="p828-sub">Free libraries to plug into adventure meetings, campfires, and pack-meeting gathering activities.</p>
-    <div class="p828-grid">
+  <section class="section" data-category="support">
+    <div class="section-head"><h2>Songs, Skits, Games &amp; STEM</h2></div>
+    <p class="sub">Free libraries to plug into adventure meetings, campfires, and pack-meeting gathering activities.</p>
+    <div class="grid">
 
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://www.macscouter.com/Songs/" target="_blank" rel="noopener">MacScouter &mdash; Songs, Skits &amp; Stories</a></h3>
-        <p class="p828-desc">Massive free library of campfire songs, skits, run-ons, and stories indexed by type.</p>
-        <p class="p828-url">macscouter.com/Songs/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Massive free library of campfire songs, skits, run-ons, and stories indexed by type.</p>
+        <p class="url">macscouter.com/Songs/</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="archive" data-mixed="yes">
         <h3><a href="https://www.scoutsongs.com/" target="_blank" rel="noopener">Scout Songs</a></h3>
-        <p class="p828-desc">Searchable database of Scout songs with lyrics, melodies, and audio clips.</p>
-        <p class="p828-url">scoutsongs.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Archive</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Searchable database of Scout songs with lyrics, melodies, and audio clips.</p>
+        <p class="url">scoutsongs.com</p>
+        <div class="tags">
+          <span class="tag s-archive">Archive</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://akelascouncil.com/category/skits-jokes-and-stories/" target="_blank" rel="noopener">Akela's Council &mdash; Skits &amp; Cheers</a></h3>
-        <p class="p828-desc">Categorized collection of skits, audience-participation cheers, and run-ons suitable for pack meetings.</p>
-        <p class="p828-url">akelascouncil.com/category/skits-jokes-and-stories/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Categorized collection of skits, audience-participation cheers, and run-ons suitable for pack meetings.</p>
+        <p class="url">akelascouncil.com/category/skits-jokes-and-stories/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://www.greatgroupgames.com/" target="_blank" rel="noopener">Great Group Games</a></h3>
-        <p class="p828-desc">Free indoor and outdoor group game ideas, filterable by group size and age.</p>
-        <p class="p828-url">greatgroupgames.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Free indoor and outdoor group game ideas, filterable by group size and age.</p>
+        <p class="url">greatgroupgames.com</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://www.ultimatecampresource.com/" target="_blank" rel="noopener">Ultimate Camp Resource</a></h3>
-        <p class="p828-desc">Free camp games, songs, skits, and crafts indexed by category and age range.</p>
-        <p class="p828-url">ultimatecampresource.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Free camp games, songs, skits, and crafts indexed by category and age range.</p>
+        <p class="url">ultimatecampresource.com</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://cubscoutideas.com/category/games/" target="_blank" rel="noopener">Cub Scout Ideas &mdash; Games</a></h3>
-        <p class="p828-desc">Curated indoor/outdoor games tagged by den-meeting or pack-meeting use.</p>
-        <p class="p828-url">cubscoutideas.com/category/games/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">Blog</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Curated indoor/outdoor games tagged by den-meeting or pack-meeting use.</p>
+        <p class="url">cubscoutideas.com/category/games/</p>
+        <div class="tags">
+          <span class="tag s-blog">Blog</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="lion tiger wolf bear" data-source="archive" data-mixed="yes">
+      <article class="card" data-ranks="lion tiger wolf bear" data-source="archive" data-mixed="yes">
         <h3><a href="https://www.dltk-kids.com/" target="_blank" rel="noopener">DLTK's Crafts for Kids</a></h3>
-        <p class="p828-desc">Printable craft templates and coloring pages that map well to many Cub Scout adventure craft requirements.</p>
-        <p class="p828-url">dltk-kids.com</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-archive">Printable</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">Lion</span><span class="p828-tag">Tiger</span><span class="p828-tag">Wolf</span><span class="p828-tag">Bear</span>
+        <p class="desc">Printable craft templates and coloring pages that map well to many Cub Scout adventure craft requirements.</p>
+        <p class="url">dltk-kids.com</p>
+        <div class="tags">
+          <span class="tag s-archive">Printable</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">Lion</span><span class="tag">Tiger</span><span class="tag">Wolf</span><span class="tag">Bear</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="blog" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="blog" data-mixed="yes">
         <h3><a href="https://www.sciencebuddies.org/" target="_blank" rel="noopener">Science Buddies</a></h3>
-        <p class="p828-desc">Free K-12 STEM activities and experiments. Useful for Webelos/AOL STEM adventures and elective adventures across ranks.</p>
-        <p class="p828-url">sciencebuddies.org</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">STEM</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Free K-12 STEM activities and experiments. Useful for Webelos/AOL STEM adventures and elective adventures across ranks.</p>
+        <p class="url">sciencebuddies.org</p>
+        <div class="tags">
+          <span class="tag s-blog">STEM</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://www.nasa.gov/stem/" target="_blank" rel="noopener">NASA STEM Engagement</a></h3>
-        <p class="p828-desc">Free STEM activities and printables aligned to space, engineering, and earth-science Cub Scout adventures.</p>
-        <p class="p828-url">nasa.gov/stem/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official (gov)</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Free STEM activities and printables aligned to space, engineering, and earth-science Cub Scout adventures.</p>
+        <p class="url">nasa.gov/stem/</p>
+        <div class="tags">
+          <span class="tag s-official">Official (gov)</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="bear webelos aol" data-source="blog">
+      <article class="card" data-ranks="bear webelos aol" data-source="blog">
         <h3><a href="https://pbskids.org/designsquad/" target="_blank" rel="noopener">PBS Kids Design Squad</a></h3>
-        <p class="p828-desc">Free engineering activity guides and challenges that complement Bear, Webelos, and AOL STEM and engineering adventures.</p>
-        <p class="p828-url">pbskids.org/designsquad/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-blog">STEM</span>
-          <span class="p828-tag">Bear</span><span class="p828-tag">Webelos</span><span class="p828-tag">Arrow of Light</span>
+        <p class="desc">Free engineering activity guides and challenges that complement Bear, Webelos, and AOL STEM and engineering adventures.</p>
+        <p class="url">pbskids.org/designsquad/</p>
+        <div class="tags">
+          <span class="tag s-blog">STEM</span>
+          <span class="tag">Bear</span><span class="tag">Webelos</span><span class="tag">Arrow of Light</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://lnt.org/why/youth-programs/" target="_blank" rel="noopener">Leave No Trace for Kids (PEAK)</a></h3>
-        <p class="p828-desc">Official Leave No Trace youth education resources including kid-friendly activity guides.</p>
-        <p class="p828-url">lnt.org/why/youth-programs/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official Leave No Trace youth education resources including kid-friendly activity guides.</p>
+        <p class="url">lnt.org/why/youth-programs/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
-      <article class="p828-card" data-ranks="all" data-source="official" data-mixed="yes">
+      <article class="card" data-ranks="all" data-source="official" data-mixed="yes">
         <h3><a href="https://www.scouting.org/outdoor-programs/outdoor-ethics/" target="_blank" rel="noopener">Outdoor Code &amp; Ethics (Official)</a></h3>
-        <p class="p828-desc">Official outdoor ethics resources: Outdoor Code, Leave No Trace, and Tread Lightly! crosswalks for Cub Scouts.</p>
-        <p class="p828-url">scouting.org/outdoor-programs/outdoor-ethics/</p>
-        <div class="p828-tags">
-          <span class="p828-tag p828-source-official">Official</span>
-          <span class="p828-tag p828-mixed">Mixed-rank friendly</span>
-          <span class="p828-tag">All ranks</span>
+        <p class="desc">Official outdoor ethics resources: Outdoor Code, Leave No Trace, and Tread Lightly! crosswalks for Cub Scouts.</p>
+        <p class="url">scouting.org/outdoor-programs/outdoor-ethics/</p>
+        <div class="tags">
+          <span class="tag s-official">Official</span>
+          <span class="tag mixed">Mixed-rank friendly</span>
+          <span class="tag">All ranks</span>
         </div>
       </article>
 
     </div>
   </section>
-
-  <footer class="p828-footer">
-    <p><strong>How to use this list well.</strong> For requirements and rank wording, the official Adventure Library at scouting.org is the source of truth. Use blogs and archives for inspiration, scripts, and printables &mdash; then verify the language against current program materials before delivering. Your local council website often has additional public PDFs (program planning guides, ceremony libraries); check the Indian Waters Council site for South Carolina pack-specific support.</p>
-    <p><strong>Got a great resource we missed?</strong> Email it to your Cubmaster and we'll add it to the next refresh.</p>
-    <p>Pack 828 &middot; Compiled May 2026</p>
-  </footer>
 </div>
+
+<footer class="site-footer">
+  <p><strong>How to use this list well.</strong> For requirements and rank wording, the official Adventure Library at scouting.org is the source of truth. Use blogs and archives for inspiration, scripts, and printables &mdash; then verify the language against current program materials before delivering.</p>
+  <p><strong>Got a great resource we missed?</strong> Email it to your Cubmaster and we'll add it to the next refresh.</p>
+  <p>Pack 828 &middot; Compiled May 2026</p>
+</footer>
 
 <script>
 (function () {
-  var root = document.getElementById('p828-resources');
+  var root = document.getElementById('resources');
   if (!root) return;
 
-  var search = root.querySelector('#p828-search');
-  var fCat = root.querySelector('#p828-filter-category');
-  var fRank = root.querySelector('#p828-filter-rank');
-  var fSrc = root.querySelector('#p828-filter-source');
-  var fMix = root.querySelector('#p828-filter-mixed');
-  var clearBtn = root.querySelector('#p828-clear');
-  var countEl = root.querySelector('#p828-count');
-  var sections = root.querySelectorAll('.p828-section');
+  var search   = root.querySelector('#q');
+  var fCat     = root.querySelector('#f-cat');
+  var fRank    = root.querySelector('#f-rank');
+  var fSrc     = root.querySelector('#f-src');
+  var fMix     = root.querySelector('#f-mix');
+  var clearBtn = root.querySelector('#clear');
+  var countEl  = root.querySelector('#count');
+  var sections = root.querySelectorAll('.section');
 
   function applyFilters() {
     var q = (search.value || '').toLowerCase().trim();
-    var cat = fCat.value;
-    var rank = fRank.value;
-    var src = fSrc.value;
-    var mix = fMix.value;
+    var cat = fCat.value, rank = fRank.value, src = fSrc.value, mix = fMix.value;
     var totalShown = 0;
 
     sections.forEach(function (sec) {
       var secCat = sec.getAttribute('data-category');
-      var cards = sec.querySelectorAll('.p828-card');
+      var cards = sec.querySelectorAll('.card');
       var visible = 0;
+
       cards.forEach(function (card) {
-        var ranks = (card.getAttribute('data-ranks') || '').toLowerCase();
+        var ranks  = (card.getAttribute('data-ranks')  || '').toLowerCase();
         var source = (card.getAttribute('data-source') || '').toLowerCase();
-        var mixed = (card.getAttribute('data-mixed') || '').toLowerCase();
-        var text = card.textContent.toLowerCase();
+        var mixed  = (card.getAttribute('data-mixed')  || '').toLowerCase();
+        var text   = card.textContent.toLowerCase();
 
         var ok = true;
         if (cat && cat !== secCat) ok = false;
@@ -1109,16 +1128,14 @@
         if (ok) visible++;
       });
 
-      // Hide whole section if no cards match and a category filter excludes it
       sec.style.display = (cat && cat !== secCat) ? 'none' : '';
-      // Show empty state if section visible but zero cards match
-      var existingEmpty = sec.querySelector('.p828-empty');
+      var existingEmpty = sec.querySelector('.empty');
       if (sec.style.display !== 'none' && visible === 0) {
         if (!existingEmpty) {
           var div = document.createElement('div');
-          div.className = 'p828-empty';
+          div.className = 'empty';
           div.textContent = 'No resources match these filters in this section.';
-          sec.querySelector('.p828-grid').appendChild(div);
+          sec.querySelector('.grid').appendChild(div);
         }
       } else if (existingEmpty) {
         existingEmpty.remove();
@@ -1133,16 +1150,10 @@
     el.addEventListener('input', applyFilters);
     el.addEventListener('change', applyFilters);
   });
-
   clearBtn.addEventListener('click', function () {
-    search.value = '';
-    fCat.value = '';
-    fRank.value = '';
-    fSrc.value = '';
-    fMix.value = '';
+    search.value = ''; fCat.value = ''; fRank.value = ''; fSrc.value = ''; fMix.value = '';
     applyFilters();
   });
-
   applyFilters();
 })();
 </script>
